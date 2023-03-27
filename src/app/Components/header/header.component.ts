@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
       var header:any = document.querySelector("header");
       header.classList.toggle("sticky",window.scrollY>0);
   })
+  
   }
 
 }

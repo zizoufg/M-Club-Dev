@@ -1,0 +1,60 @@
+.Banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:url(/assets/home-background-img.jpg) ;
+    background-size: cover;
+
+}
+h1 {
+    font-weight: lighter;
+     text-align: center;
+     font-size: 180px;
+     color: #FFC233;
+     font-family: 'Monotype Corsiva';
+    
+     
+ }
+ h1 span {
+     position: relative;
+     animation-name: slidein;
+     animation-duration: 3s;
+    
+ }
+ .container-first {
+    
+    justify-content: center;
+    text-align: center;
+     position: relative;
+     top: 20%; 
+     
+ }
+ img[id='logo']{
+    margin-top: -45px;
+    animation-name:showup;
+     animation-duration: 3s;
+     
+    
+ }
+ 
+ @keyframes showup {
+    from {
+        
+        opacity: 0%;
+    }
+    to{
+        
+        opacity: 100%;
+    }
+ }
+ @keyframes slidein {
+    from {
+        margin-left: 150px;
+        opacity: 0%;
+    }
+    to{
+        margin-left: 0;
+        opacity: 100%;
+    }
+ }
