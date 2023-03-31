@@ -33,7 +33,7 @@
     margin-top: 100px;
     display: flex;
     height: fit-content;
-    width: 90%;
+    width: 80%;
     margin-bottom: 10%;
   
     
@@ -50,6 +50,8 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
     padding-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     
 }
 .local h1{
@@ -77,6 +79,8 @@
     
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 
 }
 .formulaire h1 {

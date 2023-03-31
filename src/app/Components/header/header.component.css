@@ -24,11 +24,14 @@ header
     z-index: 100000;
     height: 140px;
 }
-header.sticky
-{
+header.sticky 
+{   
     padding: 5px 100px;
     background: white;
     height: 80px;
+}
+header.sticky ul li a{
+    font-size: 28px;
 }
 header.sticky ul li a:hover {
     transition: 100ms;
