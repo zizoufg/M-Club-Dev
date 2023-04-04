@@ -12,6 +12,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     const x  = document.getElementById("body");
     x!.style.background ="url(/assets/main.png)";
+
+    const up = document.querySelector<HTMLElement>('.up');
+window.onscroll = () => {
+  up!.classList.toggle('show', window.scrollY >= 1000);
+};
+up!.onclick = () => {
+  window.scrollTo({ behavior: 'smooth', top: 0 });
+};
+
   
    
   }

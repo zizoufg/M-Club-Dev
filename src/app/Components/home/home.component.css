@@ -7,6 +7,28 @@
    
 
 }
+.up{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: -70px;
+    background-color: transparent;
+    z-index: 99999;
+    
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.up i{
+    font-size: 30px;
+    color: transparent;
+    border: 2px white;
+    -webkit-text-stroke-width: 0.1vh ;
+    -webkit-text-stroke-color: #fff;
+}
+.up.show{
+    right: 70px;
+}
 .container-first h1 {
     font-weight: lighter;
      text-align: center;
@@ -179,6 +201,7 @@ pre{
     font-size: 15px;
 }
 .about-intro{
+    margin-right: 5%;
 	color: #fff;
 	width: 25%;
     height: 400px;
@@ -220,8 +243,26 @@ pre{
     margin-bottom: 4%;
 
 }
+.promotions{
+    margin-top: 7%;
+}
+.promotions h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 70px;
+    letter-spacing: 1px;
+    text-decoration: underline rgb(204, 203, 203) 4px;
+   text-underline-offset: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+    
+    color: white;
+    margin-bottom: 4%;
+
+}
 hr{
     opacity: 10%;
     width: 80%;
     margin: auto;
+    color: white;
 }

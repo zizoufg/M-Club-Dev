@@ -27,9 +27,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/swiper/swiper.min.css",
+              "node_modules/swiper/swiper-bundle.min.css"
+              
+              
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/swiper/swiper-bundle.min.js"
+              
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -92,11 +101,22 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+             
             ],
             "styles": [
-              "src/styles.css"
+            "src/styles.css",
+            "node_modules/swiper/swiper.min.css",
+            "node_modules/swiper/swiper-bundle.min.css"
+            
+            
+             
+              
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/bootstrap.bundle.min.js",
+              "node_modules/swiper/swiper-bundle.min.js"
+             
+            ]
           }
         }
       }
