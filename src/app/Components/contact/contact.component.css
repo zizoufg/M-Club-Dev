@@ -141,3 +141,65 @@ select[name="Durée"]{
     margin-top: 13%;
 
 }
+.feedback{
+    position: relative;
+    width: 85%;
+    margin: auto;
+    background-color: transparent;
+    
+   
+}
+.feedback form  h1{
+    color: white;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-bottom: 5%;
+    letter-spacing: 2px;
+    
+}
+.feedback form div {
+    display: flex;
+    margin-bottom: 5%;
+    
+}
+.feedback form div input,textarea{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
+   margin-left: 2%;
+   background-color: transparent;
+   border-bottom : rgba( 255, 255, 255, 0.18 ) solid 2px;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   height: max-content;
+    
+}
+.feedback form div input{
+    padding-bottom: 1%;
+}
+.feedback form div input::placeholder,textarea::placeholder{
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    
+    
+}
+
+.feedback form div button {
+    width: 90%;
+    background: linear-gradient(45deg,#FF1146,#FF5111);
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    margin-left: 2%;
+    
+   
+
+}
+

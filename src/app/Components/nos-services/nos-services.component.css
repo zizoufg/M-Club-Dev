@@ -1,0 +1,201 @@
+.Triangles{
+    
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   
+
+}
+.triangle-box1
+{position: relative;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    height: 430px;
+    width: 76%;
+    
+}
+
+.triangle-box1 .image{
+    opacity: 0.3;
+    transition: 1s;
+    width: 100%;
+    height: 500px;
+}
+.triangle-box1:hover .image{
+    transform: scale(1.1);
+    cursor: pointer;
+    opacity: 0.6;
+}
+.triangle-box1 .icon{
+    width: 10%;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    z-index: 1;
+}
+.triangle-box1 .desc
+{
+    width: 20%;
+    position: absolute;
+    top: 61%;
+    left: 55%;
+    background: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: 'Gabriola';
+
+}
+
+
+
+.triangle-box3
+{position: relative;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    height: 430px;
+    width: 76%;
+}
+
+.triangle-box3 .image{
+    opacity: 0.3;
+    transition: 1s;
+    width: 100%;
+    height: 500px;
+}
+.triangle-box3:hover .image{
+    opacity: 0.6;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.triangle-box3 .image{
+    opacity: 0.3;
+    transition: 1s;
+    width: 100%;
+    height: 1000px;
+}
+.triangle-box3 .icon{
+    width: 10%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    z-index: 1;
+}
+.triangle-box3 .desc
+{
+    width: 40%;
+    position: absolute;
+    top: 73%;
+    left: 58%;
+    background: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: 'Gabriola';
+
+}
+.Triangles-row{
+    margin-top: -56.6%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.triangle-box2
+{   position: relative;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    height: 860px;
+    width: 38%;
+}
+
+.triangle-box2 .image{
+    opacity: 0.3;
+    transition: 1s;
+    width: 100%;
+    height: 1000px;
+}
+.triangle-box2 .icon{
+    width: 17%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background: none;
+    z-index: 1;
+}
+.triangle-box2 .desc
+{
+    width: 20%;
+   
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    background: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: 'Gabriola';
+
+}
+.triangle-box2:hover .image{
+    opacity: 0.6;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.triangle-box4
+{
+    position: relative;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    height: 860px;
+    width: 38%;
+}
+
+.triangle-box4 .image{
+    opacity: 0.3;
+    transition: 1s;
+    width: 100%;
+    height: 1000px;
+}
+.triangle-box4:hover .image{
+    opacity: 0.6;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.triangle-box4 .icon{
+    width: 15%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    background: none;
+    z-index: 1;
+}
+.triangle-box4 .desc
+{
+    width: 70%;
+    
+    position: absolute;
+    top: 60%;
+    left: 77%;
+    background: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: 'Gabriola';
+
+}

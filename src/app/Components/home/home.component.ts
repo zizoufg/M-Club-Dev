@@ -11,7 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     const x  = document.getElementById("body");
-    x!.style.background ="url(/assets/main.png)";
+    x!.style.background ="url(/assets/final.png)";
+    x!.style.backgroundRepeat ="no-repeat";
+    x!.style.backgroundSize ="cover";
+
+    
+    
 
     const up = document.querySelector<HTMLElement>('.up');
 window.onscroll = () => {

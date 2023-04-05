@@ -266,3 +266,77 @@ hr{
     margin: auto;
     color: white;
 }
+.nos-services{
+    border-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+.nos-services h1{
+    font-family: "Roboto Slab", serif;
+    font-size: 70px;
+    letter-spacing: 1px;
+    text-decoration: underline rgb(204, 203, 203) 4px;
+   text-underline-offset: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+    
+    color: white;
+    margin-bottom: 4%;
+    margin-top: 3%;
+}
+/* ###############################Coach Privé############################################ */
+.Coaching-privé {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/assets/private-coach-background.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/private-coach-background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    height: 400px;
+    
+
+  }
+
+  .Coaching-privé h3 {
+    padding-top: 2%;
+    color: #ffc233;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Gabriola';
+    letter-spacing: 2;
+  }
+
+  .Coaching-privé p {
+    margin: auto;
+    width: 60%;
+    font-size: 20px;
+    color: #aaa;
+    line-height: 2;
+    font-family: 'Montserrat';
+    font-weight: normal;
+  }
+ 
+  .Coaching-privé .btn{
+    margin-top: 1%;
+   display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: bold;
+    background: #4d4d4d;
+    width: 130px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.Coaching-privé .btn:hover{
+    background-color: #FFC233;
+
+    color: black;
+}

@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './Components/carousel/carousel.component';
 import { PromotionsComponent } from './Components/promotions/promotions.component';
 import { TestComponent } from './Components/test/test.component';
+import { NosServicesComponent } from './Components/nos-services/nos-services.component';
+import { StatsComponent } from './Components/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TestComponent } from './Components/test/test.component';
     ContactComponent,
     CarouselComponent,
     PromotionsComponent,
-    TestComponent
+    TestComponent,
+    NosServicesComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
