@@ -1,3 +1,5 @@
 interface JQuery {
-    slick(options?: any): any;
+    
+    counterUp(options?: any): any;
+
   }

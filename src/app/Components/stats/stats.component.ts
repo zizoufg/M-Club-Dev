@@ -1,4 +1,14 @@
+import { Reference } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
+
+
+
+
+
+
+
+
+
 
 @Component({
   selector: 'app-stats',
@@ -8,23 +18,41 @@ import { Component, OnInit } from '@angular/core';
 export class StatsComponent implements OnInit {
 
   constructor() { }
+  
 
   ngOnInit(): void {
-    let valueDisplays = document.querySelectorAll(".num");
-let interval = 4000;
-
-valueDisplays.forEach((valueDisplay: Element) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val") || "0", 10);
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(() => {
-    startValue += 1;
-    valueDisplay.textContent = startValue.toString();
-    if (startValue === endValue) {
-      clearInterval(counter);
+    const nums = document.querySelectorAll<HTMLElement>(".container .num");
+    const section = document.querySelector<HTMLElement>(".triangle-box3");
+    let started = false; // Function Started ? No
+    
+    window.onscroll = function () {
+      if (window.scrollY >= section!.offsetTop) {
+        if (!started) {
+          nums.forEach((num) => startCount(num));
+         
+        }
+        started = true;
+        
+      }
+    };
+    
+    function startCount(el: HTMLElement) {
+      let goal = Number(el.dataset['goal']);
+      let count = setInterval(() => {
+        el.textContent = String(Number(el.textContent) + 1);
+        if (Number(el.textContent) == goal) {
+          clearInterval(count);
+        }
+      }, 2500 / goal);
     }
-  }, duration);
-});
+
+    
+    
+    
+    
+    
+   
+   
     
   }
 

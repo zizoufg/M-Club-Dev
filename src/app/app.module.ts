@@ -12,6 +12,7 @@ import { PromotionsComponent } from './Components/promotions/promotions.componen
 import { TestComponent } from './Components/test/test.component';
 import { NosServicesComponent } from './Components/nos-services/nos-services.component';
 import { StatsComponent } from './Components/stats/stats.component';
+import { ServicesCardComponent } from './Components/services-card/services-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StatsComponent } from './Components/stats/stats.component';
     PromotionsComponent,
     TestComponent,
     NosServicesComponent,
-    StatsComponent
+    StatsComponent,
+    ServicesCardComponent
   ],
   imports: [
     BrowserModule,

@@ -35,7 +35,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/swiper/swiper-bundle.min.js"
+              "node_modules/swiper/swiper-bundle.min.js",
+              "node_modules/jquery.counterup/jquery.counterup.min.js"
               
              
             ]
@@ -104,17 +105,16 @@
              
             ],
             "styles": [
-            "src/styles.css",
-            "node_modules/swiper/swiper.min.css",
-            "node_modules/swiper/swiper-bundle.min.css"
+            "src/styles.css"
+            
             
             
              
               
             ],
             "scripts": [
-              "src/assets/bootstrap.bundle.min.js",
-              "node_modules/swiper/swiper-bundle.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery.counterup/jquery.counterup.min.js"
              
             ]
           }
