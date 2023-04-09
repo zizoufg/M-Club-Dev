@@ -8,7 +8,7 @@ font-family: 'Gabriola';
 body
 {
   
-    min-height: 500vh;
+   
     background: url(/assets/main.png);
     background-size: cover;
 }

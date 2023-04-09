@@ -14,8 +14,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     const x  = document.getElementById("body");
     x!.style.backgroundImage = "url(/assets/Contact-Background.jpg)";
-    x!.style.backgroundSize = "100%";
-
+    x!.style.backgroundSize ="cover";
     
 
   }

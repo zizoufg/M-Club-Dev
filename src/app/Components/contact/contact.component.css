@@ -34,7 +34,7 @@
     display: flex;
     height: fit-content;
     width: 80%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
   
     
     
@@ -142,6 +142,7 @@ select[name="Durée"]{
 
 }
 .feedback{
+    
     position: relative;
     width: 85%;
     margin: auto;
@@ -158,6 +159,7 @@ select[name="Durée"]{
     letter-spacing: 2px;
     
 }
+
 .feedback form div {
     display: flex;
     margin-bottom: 5%;
