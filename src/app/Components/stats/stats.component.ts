@@ -22,7 +22,7 @@ export class StatsComponent implements OnInit {
 
   ngOnInit(): void {
     const nums = document.querySelectorAll<HTMLElement>(".container .num");
-    const section = document.querySelector<HTMLElement>(".triangle-box3");
+    const section = document.querySelector<HTMLElement>(".nos-services h1");
     let started = false; // Function Started ? No
     
     window.onscroll = function () {

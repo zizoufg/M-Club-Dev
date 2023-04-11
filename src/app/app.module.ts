@@ -13,6 +13,7 @@ import { TestComponent } from './Components/test/test.component';
 import { NosServicesComponent } from './Components/nos-services/nos-services.component';
 import { StatsComponent } from './Components/stats/stats.component';
 import { ServicesCardComponent } from './Components/services-card/services-card.component';
+import { TarifComponent } from './Components/tarif/tarif.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ServicesCardComponent } from './Components/services-card/services-card.
     TestComponent,
     NosServicesComponent,
     StatsComponent,
-    ServicesCardComponent
+    ServicesCardComponent,
+    TarifComponent
   ],
   imports: [
     BrowserModule,

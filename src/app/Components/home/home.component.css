@@ -32,9 +32,10 @@
 .container-first h1 {
     font-weight: lighter;
      text-align: center;
-     font-size: 180px;
+     font-size: 160px;
      color: #FFC233;
      font-family: 'Monotype Corsiva';
+     
     
      
  }
@@ -49,7 +50,7 @@
     justify-content: center;
     text-align: center;
      position: relative;
-     top: 20%; 
+     top: 25%; 
      
  }
  img[id='logo']{
@@ -270,6 +271,7 @@ hr{
     border-style: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 5%;
    
 }
 .nos-services h1{
@@ -283,7 +285,7 @@ hr{
     
     
     color: white;
-    margin-bottom: 4%;
+   
     margin-top: 3%;
 }
 /* ###############################Coach Privé############################################ */
