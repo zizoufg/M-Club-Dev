@@ -14,6 +14,7 @@ import { NosServicesComponent } from './Components/nos-services/nos-services.com
 import { StatsComponent } from './Components/stats/stats.component';
 import { ServicesCardComponent } from './Components/services-card/services-card.component';
 import { TarifComponent } from './Components/tarif/tarif.component';
+import { EquipeComponent } from './Components/equipe/equipe.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TarifComponent } from './Components/tarif/tarif.component';
     NosServicesComponent,
     StatsComponent,
     ServicesCardComponent,
-    TarifComponent
+    TarifComponent,
+    EquipeComponent
   ],
   imports: [
     BrowserModule,

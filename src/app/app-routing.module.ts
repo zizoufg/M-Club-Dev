@@ -5,12 +5,14 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Components/home/home.component';
 import { TarifComponent } from './Components/tarif/tarif.component';
+import { EquipeComponent } from './Components/equipe/equipe.component';
 
 const routes: Routes = [{path:'',component:HomeComponent},
 {path:'header',component:HeaderComponent},
 {path:'footer',component:FooterComponent},
 {path:'contact',component:ContactComponent},
-{path:'tarif',component:TarifComponent}];
+{path:'tarif',component:TarifComponent},
+{path:'equipe',component:EquipeComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

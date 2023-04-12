@@ -1,0 +1,132 @@
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 6%;
+}
+.background h1 {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    letter-spacing: 1px;
+      text-decoration: underline rgb(204, 203, 203) 4px;
+     text-underline-offset: 10px;
+      font-weight: bold;
+      text-align: center;
+      animation: slidein;
+      animation-duration: 1.5s;
+    
+    color: white;
+    font-size: 63px;
+    font-family: "Roboto Slab", serif;
+    }
+    @keyframes slidein {
+      from {
+          margin-left: 150px;
+          opacity: 0%;
+      }
+      to{
+          margin-left: 0;
+          opacity: 100%;
+      }
+   }
+.trainers{
+    width: 80%;
+   margin: auto;
+   margin-bottom: 4%;
+  
+  }
+  .trainers .box-container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 2.5rem;
+    }
+    
+    .trainers .box-container .box {
+      height: 40rem;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .trainers .box-container .box:hover .content {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      transition: 0.7s;
+    }
+    
+    .trainers .box-container .box img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    
+    .trainers .box-container .box .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 210px;
+      background: #111;
+      padding: 1.7em;
+      -webkit-transform: translateY(6.5rem);
+              transform: translateY(6.5rem);
+              transition: 0.7s;
+    }
+    
+    .trainers .box-container .box .content h4 {
+      font-size: 20px;
+      font-family: 'Montserrat';
+      font-weight: 400;
+      color: #ffc233;
+    }
+    
+    .trainers .box-container .box .content h2 {
+      font-size: 25px;
+      font-family: 'Montserrat';
+      color: #fff;
+      margin-bottom: 1%;
+    }
+    
+    .trainers .box-container .box .content .share {
+      
+      margin-top: 1.5rem;
+      border-top: 0.1rem solid #aaa;
+      list-style: none;
+      text-decoration: none;
+    }
+    
+    .trainers .box-container .box .content .share a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      margin-right: 1.5rem;
+    }
+    
+    .trainers .box-container .box .content .share a:hover {
+      color: #ffc233;
+    }
+    .trainers .box-container .box .share i{
+        margin-top: 5%;
+        margin-bottom: 2%;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      
+      
+    }
+    .trainers .box-container .box .share i p{
+      color: rgb(182, 182, 182);
+      font-family: 'Montserrat';
+      font-size: 19px;
+      font-weight: normal;
+      display: inline-block;
+      margin-left: 5px;
+      margin-bottom: 5%;
+      
+  
+      
+    }

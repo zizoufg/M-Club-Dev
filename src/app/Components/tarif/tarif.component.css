@@ -8,6 +8,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
   }
   .background {
     
@@ -16,6 +17,9 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
+    margin-bottom: 6%;
+    
+    
     
     
   }
@@ -28,18 +32,32 @@
    text-underline-offset: 10px;
     font-weight: bold;
     text-align: center;
+    animation: slidein;
+    animation-duration: 1.5s;
   
   color: white;
   font-size: 70px;
   font-family: "Roboto Slab", serif;
   }
+  @keyframes slidein {
+    from {
+        margin-left: 150px;
+        opacity: 0%;
+    }
+    to{
+        margin-left: 0;
+        opacity: 100%;
+    }
+ }
   
   .Tarif .card {
     width: 350px;
     margin: 20px;
-    background-color: #000000;
-    border: 1px solid #dae1f5;
-    border-radius: 10px;
+    background-color: #b6b6b681;
+   
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 6%;
   }
   
   .Tarif .card .header {
@@ -118,9 +136,10 @@
   }
   
   .Tarif .card .features li h4 {
-    color: #ffffff;
+    color: black;
     font-size: 16px;
     font-weight: 400;
+    font-family: 'montserrat';
     text-decoration: none;
   }
   
