@@ -1,0 +1,29 @@
+<section class="background">
+    <img src="/assets/fit.png" width="100%" height="330px" alt="">
+    <h1 id="target"> BUVETTE</h1>
+</section>
+
+<section class="services" id="services" >
+
+    
+  
+    <div class="box-container" *ngFor="let card of buvetteTab" >
+  
+        <div class="box"  >
+            <img src="{{card.image}}" alt="">
+            <div class="content">
+                <h3>{{card.name}}</h3>
+                
+                <p>{{card.description}}</p>
+               
+            </div>
+        </div>
+  
+      
+  
+    </div>
+   
+  
+  </section>
+  
+  

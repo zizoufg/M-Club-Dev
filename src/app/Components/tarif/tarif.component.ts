@@ -19,7 +19,7 @@ let originalDisplayValue = targetElement!.style.display;
 triggerElement!.addEventListener("mouseover", () => {
   targetElement!.style.transition = "opacity 0.5s";
   targetElement!.style.opacity = "0.075";
-  // targetElement!.style.marginLeft ="0%" ;
+ 
   
  
 });

@@ -36,14 +36,19 @@
     width: 80%;
    margin: auto;
    margin-bottom: 4%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
   
   }
   .trainers .box-container {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      gap: 2.5rem;
+      /* display: -ms-grid;
+      display: grid ;
+      -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]  ;
+          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) ; */
+      width: 100%;
+     
+      
     }
     
     .trainers .box-container .box {
@@ -52,7 +57,9 @@
       position: relative;
     }
     
-    .trainers .box-container .box:hover .content {
+    
+    
+    .trainers .box-container  .box:hover .content {
       -webkit-transform: translateY(0);
               transform: translateY(0);
       transition: 0.7s;
@@ -85,14 +92,14 @@
       color: #ffc233;
     }
     
-    .trainers .box-container .box .content h2 {
+    .trainers .box-container  .box .content h2 {
       font-size: 25px;
       font-family: 'Montserrat';
       color: #fff;
       margin-bottom: 1%;
     }
     
-    .trainers .box-container .box .content .share {
+    .trainers .box-container  .box .content .share {
       
       margin-top: 1.5rem;
       border-top: 0.1rem solid #aaa;
@@ -100,17 +107,17 @@
       text-decoration: none;
     }
     
-    .trainers .box-container .box .content .share a {
+    .trainers .box-container  .box .content .share a {
       font-size: 1.5rem;
       text-decoration: none;
       color: #fff;
       margin-right: 1.5rem;
     }
     
-    .trainers .box-container .box .content .share a:hover {
+    .trainers .box-container  .box .content .share a:hover {
       color: #ffc233;
     }
-    .trainers .box-container .box .share i{
+    .trainers .box-container  .box .share i{
         margin-top: 5%;
         margin-bottom: 2%;
       color: rgb(255, 255, 255);
@@ -118,7 +125,7 @@
       
       
     }
-    .trainers .box-container .box .share i p{
+    .trainers .box-container  .box .share i p{
       color: rgb(182, 182, 182);
       font-family: 'Montserrat';
       font-size: 19px;

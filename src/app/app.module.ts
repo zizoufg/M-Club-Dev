@@ -15,6 +15,13 @@ import { StatsComponent } from './Components/stats/stats.component';
 import { ServicesCardComponent } from './Components/services-card/services-card.component';
 import { TarifComponent } from './Components/tarif/tarif.component';
 import { EquipeComponent } from './Components/equipe/equipe.component';
+import { GymFitnessComponent } from './Components/gym-fitness/gym-fitness.component';
+import { EquipeCardComponent } from './Components/equipe-card/equipe-card.component';
+import { TestUserComponent } from './Components/test-user/test-user.component';
+import { CommonModule } from '@angular/common';
+import { PiscineComponent } from './Components/piscine/piscine.component';
+import { BuvetteComponent } from './Components/buvette/buvette.component';
+import { HammemComponent } from './Components/hammem/hammem.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +37,20 @@ import { EquipeComponent } from './Components/equipe/equipe.component';
     StatsComponent,
     ServicesCardComponent,
     TarifComponent,
-    EquipeComponent
+    EquipeComponent,
+    GymFitnessComponent,
+    EquipeCardComponent,
+    TestUserComponent,
+    PiscineComponent,
+    BuvetteComponent,
+    HammemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    CommonModule,
+    
     
   
   ],

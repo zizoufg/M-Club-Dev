@@ -1,0 +1,84 @@
+ .box {
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+   .box:hover .content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    transition: 0.7s;
+  }
+  
+  .box img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 210px;
+    background: #111;
+    padding: 1.7em;
+    -webkit-transform: translateY(6.5rem);
+            transform: translateY(6.5rem);
+            transition: 0.7s;
+  }
+  
+  .box .content h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #ffc233;
+  }
+  
+  .box .content h2 {
+    font-size: 25px;
+    font-family: 'Montserrat';
+    color: #fff;
+    margin-bottom: 1%;
+  }
+  
+  .box .content .share {
+    
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .box .content .share a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 1.5rem;
+  }
+  
+  .box .content .share a:hover {
+    color: #ffc233;
+  }
+  .box .share i{
+      margin-top: 5%;
+      margin-bottom: 2%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    
+    
+  }
+  .box .share i p{
+    color: rgb(182, 182, 182);
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 5%;
+    
+
+    
+  }

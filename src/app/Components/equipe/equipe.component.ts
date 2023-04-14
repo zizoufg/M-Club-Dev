@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-equipe',
   templateUrl: './equipe.component.html',
   styleUrls: ['./equipe.component.css']
 })
 export class EquipeComponent implements OnInit {
-
+   EquipeTab:any = [];
   constructor() { }
 
   ngOnInit(): void {
@@ -30,6 +31,22 @@ triggerElement!.addEventListener("mouseout", () => {
   targetElement!.style.display = originalDisplayValue;
   targetElement!.style.opacity = "1";
 });
+
+
+
+/////////////////////////////////////////////EQUIPETAB/////////////////////////////////////////////////////
+this.EquipeTab =[
+  {image:"/assets/trainer-1.jpg",name:"Skander Trigui",profession:"Cardio Hit",tel:"+216 44 140 620"},
+  {image:"/assets/trainer-2.jpg",name:"Ayman Bejaoui",profession:"Cardio Hit",tel:"+216 44 140 620"},
+  {image:"/assets/trainer-3.jpg",name:"Hamouda Bouattour",profession:"Cardio Hit",tel:"+216 44 140 620"},
+  {image:"/assets/trainer-1.jpg",name:"Skander Trigui",profession:"Cardio Hit",tel:"+216 44 140 620"},
+  {image:"/assets/trainer-2.jpg",name:"Skander Trigui",profession:"Cardio Hit",tel:"+216 44 140 620"},
+  {image:"/assets/trainer-3.jpg",name:"Skander Trigui",profession:"Cardio Hit",tel:"+216 44 140 620"}
+];
   }
+
+  
+
+  
 
 }
