@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 import { PiscineComponent } from './Components/piscine/piscine.component';
 import { BuvetteComponent } from './Components/buvette/buvette.component';
 import { HammemComponent } from './Components/hammem/hammem.component';
+import { PlanComponent } from './Components/plan/plan.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HammemComponent } from './Components/hammem/hammem.component';
     TestUserComponent,
     PiscineComponent,
     BuvetteComponent,
-    HammemComponent
+    HammemComponent,
+    PlanComponent
   ],
   imports: [
     BrowserModule,

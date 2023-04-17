@@ -1,0 +1,359 @@
+body{
+    margin: 0;
+    top: 0;
+    padding: 0;
+  }
+  small{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+  }
+  .Fitness{
+    margin-top: 10%;
+    /* background-image: url("/assets/Plan/Fitness.png"); */
+    min-height: 120vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    
+    
+    
+  }
+  .Piscine{
+    background-image: url("/assets/Plan/Piscine.png");
+    min-height: 138vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    
+    
+    
+    
+  }
+  .container{
+      background-color:  white;
+      border-radius: 10px;
+  }
+  .Fitness h1 {
+    text-align: center;
+  letter-spacing: 1px;
+    text-decoration: underline rgb(204, 203, 203) 4px;
+   text-underline-offset: 10px;
+    font-weight: bold;
+    text-align: center;
+    animation: slidein;
+    animation-duration: 1.5s;
+  
+  color: white;
+  font-size: 70px;
+  font-family: "Roboto Slab", serif;
+  }
+  @keyframes slidein {
+    from {
+        margin-left: 150px;
+        opacity: 0%;
+    }
+    to{
+        margin-left: 0;
+        opacity: 100%;
+    }
+ }
+  
+  
+  .Fitness .wrapper{
+      width: 67%;
+      height: 100%;
+      margin: 15px auto 0;
+      
+     
+    }
+   
+    
+    .Fitness .wrapper .tabs_wrap{
+      
+      padding: 20px;
+      /* border-bottom: 1px solid #ebedec; */
+     
+      
+    }
+    
+    .Fitness .wrapper .tabs_wrap ul{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      
+              
+    }
+    
+    .Fitness .wrapper .tabs_wrap ul li{
+      color: white;
+      width: 130px;
+      font-size: 28px;
+      font-family: 'Gabriola';
+      font-weight: normal;
+      list-style: none;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      
+    }
+    
+    .Fitness .wrapper .tabs_wrap ul li:first-child{
+      
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    
+    .Fitness .wrapper .tabs_wrap ul li:last-child{
+      
+      border-right: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      
+    }
+    
+    .Fitness .wrapper .tabs_wrap ul li:hover,
+    .Fitness .wrapper .tabs_wrap ul li.active{
+      background: #fcc233;
+      border-radius: 50px;
+      color: black;
+    }
+    
+    .Fitness .wrapper .container .item_wrap{
+      padding: 10px 20px;
+      list-style: none;
+      border-bottom: 1px solid #ebedec;
+      display: none;
+     
+    }
+    .Fitness .wrapper .container .item_wrap:nth-child(1),
+    .Fitness .wrapper .container .item_wrap:nth-child(2),
+    .Fitness .wrapper .container .item_wrap:nth-child(3),
+    .Fitness .wrapper .container .item_wrap:nth-child(4),
+    .Fitness .wrapper .container .item_wrap:nth-child(5),
+    .Fitness .wrapper .container .item_wrap:nth-child(6),
+    .Fitness .wrapper .container .item_wrap:nth-child(7),
+    .Fitness .wrapper .container .item_wrap:nth-child(8),
+    .Fitness .wrapper .container .item_wrap:nth-child(9)
+   {
+      padding: 10px 20px;
+      list-style: none;
+      border-bottom: 1px solid #ebedec;
+      display: block;
+     
+    }
+    
+   
+   
+    
+    
+    .Fitness .wrapper .container .item{
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+        padding: 15px;
+    }
+    
+  
+  
+    /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/ /* Piscine*/
+    .Piscine h1 {
+      text-align: center;
+      letter-spacing: 1px;
+        text-decoration: underline rgb(204, 203, 203) 4px;
+       text-underline-offset: 10px;
+        font-weight: bold;
+        text-align: center;
+        animation: slidein;
+        animation-duration: 1.5s;
+        color: white;
+  font-size: 70px;
+  font-family: "Roboto Slab", serif;
+  
+    }
+    .Piscine .wrapper{
+      width: 67%;
+      height: 100%;
+      margin: 15px auto 0;
+      padding-bottom: 7%;
+      
+     
+    }
+   
+    
+    .Piscine .wrapper .tabs_wrap{
+      
+      padding: 20px;
+      /* border-bottom: 1px solid #ebedec; */
+     
+      
+    }
+    
+    .Piscine .wrapper .tabs_wrap ul{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      
+              
+    }
+    
+    .Piscine .wrapper .tabs_wrap ul li{
+      color: white;
+      width: 130px;
+      font-size: 28px;
+      font-family: 'Gabriola';
+      font-weight: normal;
+      list-style: none;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      
+    }
+    
+    .Piscine .wrapper .tabs_wrap ul li:first-child{
+      
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    
+    .Piscine .wrapper .tabs_wrap ul li:last-child{
+      
+      border-right: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    
+    .Piscine .wrapper .tabs_wrap ul li:hover,
+    .Piscine .wrapper .tabs_wrap ul li.active{
+      background: #fcc233;
+      border-radius: 50px;
+      color: black;
+    }
+    
+    .Piscine .wrapper .container .item_wrap{
+      padding: 10px 20px;
+      list-style: none;
+      border-bottom: 1px solid #ebedec;
+      display: none;
+     
+    }
+    .Piscine .wrapper .container .item_wrap:nth-child(1),
+    .Piscine .wrapper .container .item_wrap:nth-child(2),
+    .Piscine .wrapper .container .item_wrap:nth-child(3),
+    .Piscine .wrapper .container .item_wrap:nth-child(4),
+    .Piscine .wrapper .container .item_wrap:nth-child(5),
+    .Piscine .wrapper .container .item_wrap:nth-child(6),
+    .Piscine .wrapper .container .item_wrap:nth-child(7),
+    .Piscine .wrapper .container .item_wrap:nth-child(8),
+    .Piscine .wrapper .container .item_wrap:nth-child(9),
+    .Piscine .wrapper .container .item_wrap:nth-child(10),
+    .Piscine .wrapper .container .item_wrap:nth-child(11)
+    
+   {
+      padding: 10px 20px;
+      list-style: none;
+      border-bottom: 1px solid #ebedec;
+      display: block;
+     
+    }
+    
+   
+   
+    
+    
+    .Piscine .wrapper .container .item{
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+              padding: 20px;
+    }
+    
+  
+    
+    .item_wrap .item .item_left{
+      
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    
+    
+  
+    .item_wrap .item_left .data .name{
+      font-weight: 600;
+      font-family: 'Montserrat';
+      color: black;
+      font-size: 20px;
+    }
+    .Coach{
+      margin-top: -2%;
+      margin-left: -48%;
+      width: 3.75%;
+      position: absolute;
+      
+    }
+    .Time{
+      width: 3.75%;
+      margin-left: 26%;
+      position: absolute;
+    }
+    .desc_t{
+      font-size: 18px;
+      font-family: 'Montserrat';
+      font-weight: 370;
+      position: absolute;
+      margin-left: 31%;
+    }
+    .desc_c{
+      font-size: 18px;
+      font-family: 'Montserrat';
+      font-weight: 370;
+      position: absolute;
+      margin-left: -43%;
+      margin-top: -9px;
+    }
+ 
+  .Lieu{
+    margin-left: 55%;
+     margin-top: -3%;
+      width: 2%;
+      position: absolute;
+  }
+  .desc_l{
+     font-size: 18px;
+      font-family: 'Montserrat';
+      font-weight: 370;
+      position: absolute;
+      
+      margin-left: 57.5%;
+     margin-top: -2.5%;
+      
+  }
+    
+    

@@ -10,6 +10,7 @@ import { GymFitnessComponent } from './Components/gym-fitness/gym-fitness.compon
 import { PiscineComponent } from './Components/piscine/piscine.component';
 import { BuvetteComponent } from './Components/buvette/buvette.component';
 import { HammemComponent } from './Components/hammem/hammem.component';
+import { PlanComponent } from './Components/plan/plan.component';
 
 const routes: Routes = [{path:'',component:HomeComponent},
 {path:'header',component:HeaderComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [{path:'',component:HomeComponent},
 {path:'gym',component:GymFitnessComponent},
 {path:'piscine',component:PiscineComponent},
 {path:'buvette',component:BuvetteComponent},
-{path:'hammem',component:HammemComponent}];
+{path:'hammem',component:HammemComponent},
+{path:'plan',component:PlanComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
