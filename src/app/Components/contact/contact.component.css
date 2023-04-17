@@ -2,7 +2,8 @@
 .intro{
     position: relative;
     margin: auto;
-    margin-top: 12%;
+    /* margin-top: 12%; */
+    padding-top: 12%;
     height: fit-content;
     text-align: center;
     background: none;

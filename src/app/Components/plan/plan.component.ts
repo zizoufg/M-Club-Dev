@@ -29,13 +29,6 @@ triggerElement!.addEventListener("mouseout", () => {
   targetElement!.style.opacity = "1";
 });
 //////////////////////////animation piscine //////////////////////////////////////
-const section = document.querySelector<HTMLElement>(".Piscine .wrapper .tabs_wrap ul");
-const animation = document.querySelector<HTMLElement>(".Piscine h1");
-if (window.scrollY >= section!.offsetTop) {
-  animation!.style.animation ="slidein";
-  animation!.style.animationDuration ="1.5s";
-
-}
 
 
 

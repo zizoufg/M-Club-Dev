@@ -13,11 +13,10 @@ export class TestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.users = [
-      { id: 1, name: 'Alice' },
-      { id: 2, name: 'Bob' },
-      { id: 3, name: 'Charlie' },
-    ];
+    window.addEventListener("scroll",function(){
+      var header = document.getElementById("myNavbar");
+      header!.classList.toggle("sticky",window.scrollY>0);
+  })
     
   }
     

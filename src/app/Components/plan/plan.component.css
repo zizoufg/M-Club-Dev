@@ -1,15 +1,12 @@
-body{
-    margin: 0;
-    top: 0;
-    padding: 0;
-  }
+
   small{
     font-size: 13px;
     font-weight: 400;
     font-family: 'Montserrat';
   }
   .Fitness{
-    margin-top: 10%;
+    /* margin-top: 10%; */
+    padding-top: 10%;
     /* background-image: url("/assets/Plan/Fitness.png"); */
     min-height: 120vh;
     background-size: cover ;
@@ -42,10 +39,11 @@ body{
     text-align: center;
     animation: slidein;
     animation-duration: 1.5s;
-  
-  color: white;
-  font-size: 70px;
-  font-family: "Roboto Slab", serif;
+    margin-bottom: 4%;
+    color: white;
+    font-size: 70px;
+    font-family: "Roboto Slab", serif;
+    /* margin-top: 5%; */
   }
   @keyframes slidein {
     from {
@@ -69,7 +67,7 @@ body{
    
     
     .Fitness .wrapper .tabs_wrap{
-      
+      margin-bottom: 2%;
       padding: 20px;
       /* border-bottom: 1px solid #ebedec; */
      
@@ -175,11 +173,10 @@ body{
        text-underline-offset: 10px;
         font-weight: bold;
         text-align: center;
-        animation: slidein;
-        animation-duration: 1.5s;
-        color: white;
-  font-size: 70px;
-  font-family: "Roboto Slab", serif;
+      margin-bottom: 4%; 
+      color: white;
+      font-size: 70px;
+       font-family: "Roboto Slab", serif;
   
     }
     .Piscine .wrapper{
@@ -193,7 +190,7 @@ body{
    
     
     .Piscine .wrapper .tabs_wrap{
-      
+      margin-bottom: 2%;
       padding: 20px;
       /* border-bottom: 1px solid #ebedec; */
      
@@ -288,7 +285,7 @@ body{
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-              padding: 20px;
+              padding: 15px;
     }
     
   

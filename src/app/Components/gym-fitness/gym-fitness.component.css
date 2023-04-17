@@ -41,19 +41,25 @@ font-family: "Roboto Slab", serif;
 .services{
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* set 3 items per row */
-  grid-gap: 50px;
-    width: 80%;
+  grid-gap: 20px;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
     margin: auto;
     margin-bottom: 2%;
+    
 }
 .services .box-container{
-  
+    
     width: 80%;
     margin: auto;
   }
   
   .services .box-container .box{
     height: 17rem;
+    width: 25rem;
     flex: 1 1 30rem;
     border: 1rem solid var(--white);
     box-shadow: var(--box-shadow);
