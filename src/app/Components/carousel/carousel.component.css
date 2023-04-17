@@ -109,4 +109,31 @@
   #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #FFC233;
   }
+
+
+
+  @media (max-width:412px){
+    .slider{
+      width: 90%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: auto;
+    }
+    .navigation-manual{
+      position: absolute;
+      width: 90%;
+      margin-top: -220px;
+      display: flex;
+      justify-content: center;
+    }.navigation-auto{
+      position: absolute;
+      display: flex;
+      width: 90%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-top: 280px;
+    }
+  }
         

@@ -105,13 +105,17 @@
     border: none;
     padding-left: 20px;
     padding-top: 5px;
+    caret-color:white;
+    font-family: 'Montserrat';
+   color: white;
+   font-size: 15px;
 
 }
 .formulaire form div input::placeholder{
     
     color: #9d9c9c;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-family: 'Montserrat';
     
 }
 select,input {
@@ -127,8 +131,8 @@ select[name="Durée"]{
     border-radius: 20px;
     border: none;
     padding-left: 20px;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-family: 'Montserrat';
 
 }
 .formulaire form button {
@@ -136,11 +140,22 @@ select[name="Durée"]{
     border-radius: 20px;
     font-size: 20px;
     height: 35px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat';
     border: none;
     width: 30%;
     margin-top: 13%;
 
+}
+.formulaire form button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+}
+select{
+    background: white;
+}
+option{
+    background-color: white;
+    color: black;
 }
 .feedback{
     
@@ -157,8 +172,8 @@ select[name="Durée"]{
 }
 .feedback form  h1{
     color: white;
-    font-size: 60px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-family: 'Gabriola';
     font-weight: 500;
     margin-bottom: 5%;
     letter-spacing: 2px;
@@ -190,28 +205,47 @@ select[name="Durée"]{
     padding-bottom: 1%;
     color: white;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat';
+}
+.feedback form div textarea{
+    
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat';  
 }
 .feedback form div input::placeholder,textarea::placeholder{
     color: white;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat';
     letter-spacing: 2px;
-    font-weight: 200;
+    font-weight: 300;
     
     
 }
 
-.feedback form div button {
-    width: 90%;
-    background: linear-gradient(45deg,#FF1146,#FF5111);
-    color: white;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    border: none;
-    margin-left: 2%;
+
+.feedback div form div .btn{
     
-   
-
+    
+     font-family: 'Montserrat';
+     font-size: 14px;
+     font-weight: bold;
+     background: #4d4d4d;
+     width: 90%;
+     margin: auto;
+     padding: 15px;
+     text-align: center;
+     text-decoration: none;
+     text-transform: uppercase;
+     color: #fff;
+     margin-right: 2%;
+     
+     
+     cursor: pointer;
+    
 }
+.feedback div form div .btn:hover{
+    background-color: #FFC233;
 
+    color: black;
+}

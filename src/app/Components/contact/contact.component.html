@@ -1,11 +1,8 @@
 <section class="main">
     <Section class="intro">
         <h1>Qui somme nous ?</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt mollitia aliquam,
-             fuga quidem qui molestias neque quis animi sunt sapiente obcaecati, 
-             libero minus aut praesentium dicta provident temporibus esse,
-              itaque vero dolor repellat? Nisi dignissimos excepturi, qui obcaecati architecto dolorum libero error at, 
-            ipsa nulla fuga fugiat adipisci ex atque?</h2>
+        <h2 style="text-align:justify;">M club s’est donnée pour mission d’inspirer, motiver et encadrer des personnes de tout âge pour les aider à s’entrainer et améliorer leur bien-être Offrant un service de qualité et équipée d’appareils à la pointe de la technologie ,  la chaîne fournit
+            à ses adhérents des conditions propices à la pratique du sport et leur offre un environnement convivial où se tissent de vrais liens sociaux</h2>
     </Section>
     <section class="glass">
     <div class="local">
@@ -16,18 +13,20 @@
         <form action="">
             <h1>Inscription</h1>
             <div>
-                <input type="text" placeholder="Nom">
-                <input type="text" placeholder="Prenom">
+                <input type="text" placeholder="Nom"onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''">
+                <input type="text" placeholder="Prénom"  onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''">
             </div>
             <div>
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Numéro Tel">
+                <input type="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''">
+                <input type="tel" placeholder="Téléphone"  onblur="this.placeholder='Téléphone'" onfocus="this.placeholder=''">
             </div>
             <div>
-                <input type="text" placeholder="Abonnement">
-                <select name="Durée" id="" aria-placeholder="Durée" >
+                <input type="text" placeholder="Abonnement"  onblur="this.placeholder='Abonnement'" onfocus="this.placeholder=''">
+                <select name="Durée" id="" aria-placeholder="Durée"   >
                     <option value="" disabled selected>Durée </option>
                     <option value="">3 mois </option>
+                    <option value="">9 mois  </option>
+                    <option value="">12 mois </option>
                 </select>
             </div>
             <button>S'inscrire</button>
@@ -39,16 +38,16 @@
             <form action="">
                 <h1>Contactez-nous </h1>
                 <div>
-                    <input type="text" placeholder="Nom">
-                    <input type="text" placeholder="Prenom">
+                    <input type="text" placeholder="Nom" onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''">
+                    <input type="text" placeholder="Prénom" onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''">
                 </div>
                 <div>
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Tel">
+                    <input type="email" placeholder="Email" onblur="this.placholder=this.placeholder='Email'" onfocus="this.placeholder=''">
+                    <input type="tel" placeholder="Téléphone" onblur="this.placholder=this.placeholder='Téléphone'" onfocus="this.placeholder=''">
                 </div>
                 <div>
-                    <textarea name="" id=""  placeholder="Message"></textarea>
-                    <button>Envoyer</button>
+                    <textarea name="" id=""  placeholder="Message" onblur="this.placholder=this.placeholder='Message'" onfocus="this.placeholder=''"></textarea>
+                    <a href="#" class="btn">Envoyer</a>
                 </div>
 
             </form>

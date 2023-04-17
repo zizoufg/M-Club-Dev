@@ -36,16 +36,16 @@
     width: 80%;
    margin: auto;
    margin-bottom: 4%;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 20px;
+   display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  
   
   }
   .trainers .box-container {
-      /* display: -ms-grid;
-      display: grid ;
-      -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]  ;
-          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) ; */
+   
       width: 100%;
      
       
@@ -137,3 +137,41 @@
   
       
     }
+  /* //////////////////////////////////////////RESPONSIVE//////////////////////////////////////////// */
+  
+    @media (max-width: 414px) {
+      .trainers .box-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 2rem;
+      }
+  
+  
+  
+     } 
+     @media (max-width: 920px) {
+      .trainers .box-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(17rem, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        gap: 1.5rem;
+      }
+  
+  
+  
+     } 
+     @media (max-width: 1024px) {
+      .trainers .box-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2.5rem;
+      }
+  
+  
+  
+     }

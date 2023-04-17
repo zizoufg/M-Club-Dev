@@ -57,7 +57,7 @@
     margin-top: -45px;
     animation-name:showup;
      animation-duration: 3s;
-     
+     height:"250px" !important;
     
  }
  
@@ -341,4 +341,286 @@ hr{
     background-color: #FFC233;
 
     color: black;
+}
+
+/*//////////////////////////////////////////////////// responsive ///////////////////////////////////// */
+
+@media (max-width: 992px)
+{   
+    .Banner .container-first h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 100px;
+    color: #FFC233;
+    font-family: 'Monotype Corsiva';
+   
+
+    }
+    img[id='logo']{
+        margin-top: -45px;
+        animation-name:showup;
+         animation-duration: 3s;
+         height: 170px !important;
+
+         
+        
+     }
+     .main {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: -500px;
+        margin-left: -7%;
+               
+        
+    
+       
+        
+    
+     }
+    .about-intro{
+        display: none;
+    }
+  .container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  pre{
+    font-size: 30px;
+  }
+  .container .card {
+    width: 400px;
+  }
+}
+@media (max-width: 768px)
+{   .Banner .container-first h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 100px !important;
+    color: #FFC233;
+    font-family: 'Monotype Corsiva';
+   
+
+    }
+    img[id='logo']{
+        margin-top: -45px;
+        animation-name:showup;
+         animation-duration: 3s;
+         height: 130px !important;
+
+         
+        
+     }
+    .main {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px !important;
+    margin-left: -7%;
+           
+    
+
+   
+    
+
+ }
+    .container .card {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+      }
+      .about-intro{
+        display: none;
+    }
+    .container .card .imgBx {
+        position: relative;
+
+      }
+      .container .card .imgBx,
+      .container .card:hover .imgBx {
+        width: 100%;
+        height: 200px;
+        left:0;
+
+      }
+      .container .card .imgBx img,
+      .container .card:hover .imgBx img {
+        max-width: 100px;
+      }
+      .container .card .content{
+        position: relative;
+        width: 100%;
+      }
+
+
+}
+@media (max-width: 1780px)
+{
+    .about-intro p{
+        font-size: 20px;
+    }
+    .about-intro h1{
+        font-size: 30px;
+    }
+    .container .card .content p{
+        font-size: 12px;
+
+    }
+    img[id='logo']{
+        margin-top: -45px;
+        animation-name:showup;
+         animation-duration: 3s;
+        
+        
+     }
+
+}
+@media (max-width: 1124px)
+{   .Banner .container-first h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 140px;
+    color: #FFC233;
+    font-family: 'Monotype Corsiva';
+
+    }
+    img[id='logo']{
+        margin-top: -45px;
+        animation-name:showup;
+         animation-duration: 3s;
+         height: 200px !important;
+
+         
+        
+     }
+    .about-intro p{
+        font-size: 17px;
+    }
+    .about-intro h1{
+        font-size: 25px;
+    }
+    .container .card .content p{
+        font-size: 10px;
+
+    }
+    .container .card .content h3{
+        font-size: 20px;
+
+    }
+    pre{
+        font-size: 35px;
+    }
+
+}
+@media (max-width: 415px){
+    .Banner .container-first h1 {
+        font-weight: lighter;
+        text-align: center;
+        font-size: 50px !important;
+        color: #FFC233;
+        font-family: 'Monotype Corsiva';
+        margin-left: 5%;
+        margin-bottom: 35px;
+       
+    
+        }
+        img[id='logo']{
+            margin-top: -45px;
+            animation-name:showup;
+             animation-duration: 3s;
+             height: 130px !important;
+    
+             
+            
+         }
+        .main {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: -200px !important;
+        margin-left: -7%;
+               
+         }
+
+         .nos-services h1{
+            font-family: "Roboto Slab", serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-decoration: underline rgb(204, 203, 203) 4px;
+           text-underline-offset: 10px;
+            font-weight: bold;
+            text-align: center;
+            
+            
+            color: white;
+           
+            margin-top: 3%;
+        }
+        .actualités h1 {
+            font-family: "Roboto Slab", serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-decoration: underline rgb(204, 203, 203) 4px;
+           text-underline-offset: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            
+            color: white;
+            margin-bottom: 4%;
+        
+        }
+        .promotions h1 {
+            font-family: "Roboto Slab", serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-decoration: underline rgb(204, 203, 203) 4px;
+           text-underline-offset: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            color: white;
+            margin-bottom: 4%;
+        
+        }
+        .Coaching-privé h3 {
+            padding-top: 2%;
+            color: #ffc233;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: 'Gabriola';
+            letter-spacing: 2;
+          }
+          .Coaching-privé p {
+            margin: auto;
+            width: 60%;
+            font-size: 12px;
+            color: #aaa;
+            line-height: 2;
+            font-family: 'Montserrat';
+            font-weight: normal;
+          }
+          .Coaching-privé .btn{
+            margin-top: 1%;
+           display: inline-block;
+            font-family: 'Montserrat';
+            font-size: 8px;
+            font-weight: bold;
+            background: #4d4d4d;
+            width: 100px;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+        
+        }
+
 }
