@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
     users:any =[];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     window.addEventListener("scroll",function(){
@@ -18,6 +19,10 @@ export class TestComponent implements OnInit {
       header!.classList.toggle("sticky",window.scrollY>0);
   })
     
+  }
+  GoToLogin(){
+    this.router.navigate(['login']);
+
   }
     
 }

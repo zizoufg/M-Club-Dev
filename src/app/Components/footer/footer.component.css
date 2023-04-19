@@ -1,13 +1,4 @@
 
-body{
-	line-height: 1.5;
-	font-family: 'Gabriola';
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -21,7 +12,9 @@ ul{
 }
 .footer{
 	background-color: #1a1b1f;
-    padding: 70px 0;
+    padding: 20px 0;
+	height: 300px;
+	
 }
 .footer-col{
    width: 20%;
@@ -31,7 +24,7 @@ ul{
 	font-size: 25px;
 	color: #ffffff;
 	text-transform: capitalize;
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 	font-weight: 500;
 	position: relative;
 }
@@ -115,15 +108,15 @@ ul{
 
 /*responsive*/
 
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
+
 @media(max-width: 767px){
 	.footer-col{
 	  width: 50%;
 	  margin-bottom: 30px;
   }
+  	.footer{
+		height: fit-content;
+	}
   }
   @media(max-width: 574px){
 	.footer-col{
@@ -131,7 +124,7 @@ ul{
   }
   
   }
-}
+
 
 
 

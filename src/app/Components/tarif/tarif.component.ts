@@ -1,5 +1,6 @@
 import { transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tarif',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarifComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     const triggerElement = document.getElementById("trigger");
@@ -38,6 +39,13 @@ triggerElement!.addEventListener("mouseout", () => {
    
     
    
+  }
+  GoToContact(){
+    const myInput = document.getElementById('myInput');
+    this.router.navigate(['contact']);
+    
+    
+
   }
 
 }

@@ -1,0 +1,27 @@
+<div class="popup">
+    <button id="close">&times;</button>
+    <h2>Attention !</h2>
+    <p>
+      Cette page est dédiée seulement pour la connexion des administrateurs !!
+    </p>
+    <a id="continue" routerLink="login">Continuer</a>
+</div>
+  <div class="login-wrapper">
+    <form (ngSubmit)="login()" action="" class="form">
+      <img src="/assets/Login/user-login-icon.png" alt="">
+      <h2>Admin Login</h2>
+      <div class="input-group">
+        <input type="text" name="loginAdmin" id="loginAdmin" [(ngModel)]="email" autocomplete="off"  required>
+        <label for="loginAdmin">Admin Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="loginPassword" id="loginPassword" [(ngModel)]="password" required>
+        <label for="loginPassword">Password</label>
+      </div>
+      <span id="error" style="font-size: 15px; font-family: Montserrat;" ></span>
+      <input (click)="login()" type="submit"  value="Login" class="submit-btn">
+      
+    </form>
+
+    
+  </div>

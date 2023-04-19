@@ -6,7 +6,7 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ContactComponent } from './Components/contact/contact.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CarouselComponent } from './Components/carousel/carousel.component';
 import { PromotionsComponent } from './Components/promotions/promotions.component';
 import { TestComponent } from './Components/test/test.component';
@@ -23,6 +23,11 @@ import { PiscineComponent } from './Components/piscine/piscine.component';
 import { BuvetteComponent } from './Components/buvette/buvette.component';
 import { HammemComponent } from './Components/hammem/hammem.component';
 import { PlanComponent } from './Components/plan/plan.component';
+import { LoginComponent } from './Components/login/login.component';
+import { DashbordComponent } from './Components/dashbord/dashbord.component';
+import { AuthGuard } from './services/auth-guard.service'; // Import the AuthGuard service
+import { FormsModule } from '@angular/forms'; // import the FormsModule
+
 
 @NgModule({
   declarations: [
@@ -45,18 +50,21 @@ import { PlanComponent } from './Components/plan/plan.component';
     PiscineComponent,
     BuvetteComponent,
     HammemComponent,
-    PlanComponent
+    PlanComponent,
+    LoginComponent,
+    DashbordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     CommonModule,
+    FormsModule 
     
     
   
   ],
-  providers: [],
+  providers: [[AuthGuard]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,9 @@ import { PiscineComponent } from './Components/piscine/piscine.component';
 import { BuvetteComponent } from './Components/buvette/buvette.component';
 import { HammemComponent } from './Components/hammem/hammem.component';
 import { PlanComponent } from './Components/plan/plan.component';
+import { LoginComponent } from './Components/login/login.component';
+import { DashbordComponent } from './Components/dashbord/dashbord.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [{path:'',component:HomeComponent},
 {path:'header',component:HeaderComponent},
@@ -22,7 +25,9 @@ const routes: Routes = [{path:'',component:HomeComponent},
 {path:'piscine',component:PiscineComponent},
 {path:'buvette',component:BuvetteComponent},
 {path:'hammem',component:HammemComponent},
-{path:'plan',component:PlanComponent}];
+{path:'plan',component:PlanComponent},
+{path:'login',component:LoginComponent},
+{path:'dashboard',component:DashbordComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+
+    
     const x  = document.getElementById("body");
     x!.style.background ="url(/assets/final.png)";
     x!.style.backgroundRepeat ="no-repeat";
@@ -32,6 +35,9 @@ up!.onclick = () => {
 
   
    
+  }
+  GoToEquipe(){
+    this.router.navigate(['equipe']);
   }
 
 }

@@ -8,6 +8,16 @@
   
 
 }
+.sticky ul li i {
+  color: rgba(0,0,0,0.85);
+  
+  
+  
+
+}
+.sticky ul li i:hover{
+  color: #fcc233;
+}
 .sticky ul li a:hover{
   color: #fcc233;
 }
@@ -97,7 +107,7 @@ nav .wrapper{
 .nav-links li{
   list-style: none;
 }
-.nav-links li a{
+.nav-links li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 37px;
@@ -107,8 +117,24 @@ nav .wrapper{
   /* padding: 15px 15px; */
   transition: all 0.3s ease;
 }
-.nav-links li a:hover{
+.nav-links li i {
+  margin: 9px 40px;
+  color: #f2f2f2;
+  cursor: pointer;
+  
+
+}
+.nav-links li i:hover {
+
+  color: #fcc233;
+  transition: all 0.3s ease;
+
+}
+
+
+.nav-links li a:hover,img:hover{
  color:  #fcc233;
+ cursor: pointer;
 }
 .nav-links .mobile-item{
   display: none;
