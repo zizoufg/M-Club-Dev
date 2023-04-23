@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthGuard } from 'src/app/services/auth-guard.service';
 import * as  $ from "jquery";
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashbord',
@@ -9,8 +10,9 @@ import * as  $ from "jquery";
 })
 export class DashbordComponent implements OnInit {
   user:any;
-  constructor(private authGuard:AuthGuard) { }
+  constructor(private authGuard:AuthGuard, private  router:Router) { }
   sideBarOpen = true;
+  ShowCoach = false;
 
   ngOnInit(): void {
     const x = document.getElementById("body");
@@ -44,10 +46,32 @@ export class DashbordComponent implements OnInit {
       $(".nav").css("display", "block");
       $(".nav2").css("display", "none");
     });
+
+
+
+
+    ///routing to tables 
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/test') {
+          this.ShowCoach = true;
+          
+        } 
+        
+        // else {
+          
+        //   this.ShowCoach = false;
+        // }
+      }
+    });
+  }
+
+
   }
   // sideBarToggler() {
   //   this.sideBarOpen = !this.sideBarOpen;
   // }
   
 
-}
+
