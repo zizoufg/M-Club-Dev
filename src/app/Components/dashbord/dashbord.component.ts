@@ -13,6 +13,7 @@ export class DashbordComponent implements OnInit {
   constructor(private authGuard:AuthGuard, private  router:Router) { }
   sideBarOpen = true;
   ShowCoach = false;
+  ShowClients = false;
 
   ngOnInit(): void {
     const x = document.getElementById("body");
@@ -56,6 +57,13 @@ export class DashbordComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         if (event.url === '/test') {
           this.ShowCoach = true;
+          
+          
+        } 
+        if (event.url === '/clients-dashboard') {
+          this.ShowClients = true;
+          
+          
           
         } 
         

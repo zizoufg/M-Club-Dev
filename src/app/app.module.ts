@@ -36,6 +36,8 @@ import { SidenavComponent } from './Components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { ClientsDashboardComponent } from './Components/clients-dashboard/clients-dashboard.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -63,7 +65,10 @@ import { MatListModule } from '@angular/material/list';
     LoginComponent,
     DashbordComponent,
     ToolbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ClientsDashboardComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,9 @@ import { MatListModule } from '@angular/material/list';
     MatMenuModule,
     MatSidenavModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
+     
    
     
   ],

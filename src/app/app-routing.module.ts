@@ -16,6 +16,7 @@ import { DashbordComponent } from './Components/dashbord/dashbord.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { TestComponent } from './Components/test/test.component';
 import { TestUserComponent } from './Components/test-user/test-user.component';
+import { ClientsDashboardComponent } from './Components/clients-dashboard/clients-dashboard.component';
 
 const routes: Routes = [{path:'',component:HomeComponent},
 {path:'header',component:HeaderComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [{path:'',component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'dashboard',component:DashbordComponent },
 {path: 'test',component:TestComponent},
-{path:'test-user',component:TestUserComponent}];
+{path:'test-user',component:TestUserComponent},
+{path:'clients-dashboard',component:ClientsDashboardComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

@@ -41,6 +41,7 @@
     -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
+    overflow: auto;
   
   
   }

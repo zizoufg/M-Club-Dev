@@ -1,36 +1,39 @@
-<div id="mySidenav" class="sidenav">
-	<p class="logo"><span>M</span>-SoftTech</p>
-  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-  <a style="cursor: pointer;" (click)="ShowCoach  = !ShowCoach"  class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Equipe</a>
-  <a  class="icon-a" ><i class="fa fa-list icons"></i> &nbsp;&nbsp;Projects</a>
-  <a class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
-  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Inventory</a>
-  <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
-  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a>
-
-</div>
-<div id="main">
-
-	<div class="head">
+<section style="height: max-content;">
+	<div id="mySidenav" class="sidenav">
+		<p class="logo"><span>M</span>-Club Admin</p>
+	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+	  <a style="cursor: pointer;" (click)="ShowCoach  = !ShowCoach"  class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Equipe</a>
+	  <a  class="icon-a" ><i class="fa fa-list icons"></i> &nbsp;&nbsp;Projects</a>
+	  <a class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
+	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Inventory</a>
+	  <a style="cursor: pointer;"  (click)="ShowClients  = !ShowClients"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
+	  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a>
+	
+	</div>
+	<div id="main" >
+	
+		<div class="head">
+			<div class="col-div-6">
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Dashboard</span>
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
+	</div>
+		
 		<div class="col-div-6">
-<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Dashboard</span>
-<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
-</div>
+		<div class="profile">
 	
-	<div class="col-div-6">
-	<div class="profile">
-
-		<img src="/assets/DSC0411.JPG" class="pro-img" />
-		<p>Manoj Adhikari <span>UI / UX DESIGNER</span></p>
-	</div>
-	</div>
-	<div class="clearfix"></div>
-</div>
-
-	<app-test *ngIf="ShowCoach"></app-test>
-	
-	
-	
+			<img src="/assets/DSC0411.JPG" class="pro-img" />
+			<p>Manoj Adhikari <span>UI / UX DESIGNER</span></p>
+		</div>
+		</div>
+		<div class="clearfix"></div>
+		</div >
+		<section>
+			<app-test   id="test" *ngIf="ShowCoach"></app-test>
+		<app-clients-dashboard id="client" *ngIf="ShowClients"></app-clients-dashboard>
+		</section>
 		
 	
-</div>
+	</div>
+	
+</section>
+

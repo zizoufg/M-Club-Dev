@@ -1,4 +1,4 @@
-<div class="content-body">
+<div style="overflow: auto;" class="content-body">
   <div class="container-fluid">
 
 
@@ -172,13 +172,13 @@
                                   </tr>
                               </thead>
                               <tbody>
-            <tr>
-                <td>Nom</td>
-              <td>Spécialité</td>
-                                      <td>Téléphone</td>
+            <tr *ngFor="let equipe of equipes">
+                <td>{{equipe.name}}</td>
+              <td>{{equipe.profession}}</td>
+                                      <td>{{equipe.tel}}</td>
                                       <td>Lien Facebook</td>
                                       <td>Lien Instagram</td>
-                                      <td>Image</td>
+                                      <td><img height="60px" width="60px" [src]="equipe.image" alt=""></td>
             
             <td>
 
@@ -194,3 +194,7 @@
                           </table>
                       </div>
                   </div>
+  
+      <div *ngFor="let equipe of equipes">
+        hello {{equipe.name}}
+      </div>

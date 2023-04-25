@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { toArray } from 'rxjs';
+import { EquipeService } from 'src/app/services/equipe.service';
+
 
 
 
@@ -10,10 +13,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    users:any =[];
-  constructor(private router:Router) { }
+    equipes:any =[];
+  constructor(private router:Router, private EquipeService:EquipeService) { }
 
   ngOnInit(): void {
+    this.EquipeService.getAllEquipes() .pipe(
+        toArray()
+      ).subscribe((data: any[]) => {
+        this.equipes = data;
+        console.log(this.equipes[0].equipes);
+        this.equipes = this.equipes[0].equipes;
+      });
 
   
 

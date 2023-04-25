@@ -10,6 +10,8 @@ const Buvette = require("./models/buvette");
 const Equipe = require("./models/equipe");
 //mclubDB : database name 
 mongoose.connect('mongodb://localhost:27017/mclubDB');
+//CORS
+const cors = require('cors');
 
 
 
@@ -17,7 +19,13 @@ mongoose.connect('mongodb://localhost:27017/mclubDB');
 // create express application 
 const app = express();
 
+// Enable CORS
+app.use(cors());
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
 //configure APP with bodyparser to send response => JSON 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -134,7 +142,7 @@ app.get("/buvette/:id",(Req,res)=>{
 ///////////////////////////////equipe//////////////////////////////////////////////////////
 //business  logic : Req 1 : =>  get equipe
 app.get("/equipe",(Req,res)=>{
-    console.log("Here BL : Req 1");
+    console.log("Here BL : Req 1 equipe");
 
     Equipe.find().then((docs) => {
         res.json ({equipes : docs})
