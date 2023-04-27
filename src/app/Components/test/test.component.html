@@ -17,7 +17,7 @@
     </div>
 
         <!-- Modal Add Category -->
-      <form method="POST">
+      <form >
       <div class="modal fade none-border" id="add-category">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -29,15 +29,15 @@
                 <div class="row">
                   <div class="col-md-6">
                     <label class="control-label form-label">Nom</label>
-                    <input class="form-control form-white" placeholder="Enter Nom" type="text" name="nom">
+                    <input class="form-control form-white" placeholder="Enter Nom" type="text" id="Nom" name="nom"  required>
                   </div>
                   <div class="col-md-6">
                     <label class="control-label form-label">Spécialité</label>
-                    <input class="form-control form-white" placeholder="Enter Spécialité" type="text" name="dimension">
+                    <input class="form-control form-white" placeholder="Enter Spécialité" type="text" id="Spécialité" name="dimension"  required>
                   </div>
                     <div class="col-md-6">
                       <label class="control-label form-label">Téléphone</label>
-                      <input class="form-control form-white" placeholder="Enter Numéro" type="text" name="contenance">
+                      <input class="form-control form-white" placeholder="Enter Numéro" type="text" id="Tel" name="contenance"   required>
                     </div>
                     <div class="col-md-6">
                       <label class="control-label form-label">Lien Facebook</label>
@@ -75,7 +75,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default waves-effect" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal" name="save">Save</button>
+              <button type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal" (click)="AddCoach()"  name="save">Save</button>
             </div>
           </div>
         </div>
@@ -195,6 +195,4 @@
                       </div>
                   </div>
   
-      <div *ngFor="let equipe of equipes">
-        hello {{equipe.name}}
-      </div>
+    

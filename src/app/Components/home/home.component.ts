@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-
+    location.reload;
     
     const x  = document.getElementById("body");
     x!.style.background ="url(/assets/final.png)";

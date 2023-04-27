@@ -153,7 +153,7 @@ app.get("/equipe",(Req,res)=>{
 });
 //business  logic : Req 2 : =>  create equipe
 app.post("/equipe",(Req,res)=>{
-    console.log("Here BL : Req 2");
+    console.log("Here BL : Req 2 equipe ");
     const x = Req.body;
     let equipeObj = new Equipe(x);
     equipeObj.save();

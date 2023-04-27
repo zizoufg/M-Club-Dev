@@ -1,4 +1,4 @@
-<section style="height: max-content;">
+
 	<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>M</span>-Club Admin</p>
 	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
@@ -23,17 +23,18 @@
 	
 			<img src="/assets/DSC0411.JPG" class="pro-img" />
 			<p>Manoj Adhikari <span>UI / UX DESIGNER</span></p>
+			<a  href=""><i class="fa fa-sign-in mr-5" style=" font-size:30px; color:#fff;" aria-hidden="true"></i></a>
 		</div>
 		</div>
 		<div class="clearfix"></div>
 		</div >
-		<section>
-			<app-test   id="test" *ngIf="ShowCoach"></app-test>
+		<section  >
+			<app-test   id="test" *ngIf="ShowCoach" [variable]="ShowCoach"></app-test>
 		<app-clients-dashboard id="client" *ngIf="ShowClients"></app-clients-dashboard>
 		</section>
 		
 	
 	</div>
 	
-</section>
+
 

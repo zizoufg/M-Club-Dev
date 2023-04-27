@@ -75,7 +75,9 @@ export class DashbordComponent implements OnInit {
     });
   }
 
-
+  reload(){
+    location.reload;
+  }
   }
   // sideBarToggler() {
   //   this.sideBarOpen = !this.sideBarOpen;

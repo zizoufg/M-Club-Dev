@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { toArray } from 'rxjs';
 import { EquipeService } from 'src/app/services/equipe.service';
@@ -14,16 +15,23 @@ import { EquipeService } from 'src/app/services/equipe.service';
 })
 export class TestComponent implements OnInit {
     equipes:any =[];
-  constructor(private router:Router, private EquipeService:EquipeService) { }
+    @Input() variable:any ;
+  
+   
+  constructor(private router:Router, private EquipeService:EquipeService,) { }
 
   ngOnInit(): void {
+    
     this.EquipeService.getAllEquipes() .pipe(
         toArray()
       ).subscribe((data: any[]) => {
         this.equipes = data;
-        console.log(this.equipes[0].equipes);
         this.equipes = this.equipes[0].equipes;
       });
+
+
+
+   
 
   
 
@@ -54,6 +62,35 @@ $(".file_remove").on("click", function(e){
     btnOuter.removeClass("file_uploaded");
 });
   }
+  AddCoach(){
+    const name:any = document.getElementById("Nom");
+    const specialité:any = document.getElementById("Spécialité");
+    const Tel:any = document.getElementById("Tel");
+    //values:
+     const nameVal:String  = name.value ;
+     const specialitéVal:String = specialité.value;
+     const TelVal:String = Tel.value;
+   //Request
+    const Req:any = {name:nameVal,profession:specialitéVal ,tel:TelVal };
+
+    this.EquipeService.addEquipe(Req).subscribe((equipe) => {
+      console.log(`Equipe added: ${equipe}`);
+      
+    });
+
+    
+    this.variable = true;
+    
+
+  };
+
+    
+
+  }
+  // onSubmit(){
+  //   this.EquipeService.addEquipe(this.coach);
+
+  // }
 
 
 
@@ -61,7 +98,7 @@ $(".file_remove").on("click", function(e){
  
   
     
-}
+
     
 
 
