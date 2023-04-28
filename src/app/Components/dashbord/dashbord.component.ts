@@ -34,6 +34,8 @@ export class DashbordComponent implements OnInit {
       $(".icon-a").css("visibility", "hidden");
       $(".icons").css("visibility", "visible");
       $(".icons").css("margin-left", "-8px");
+
+      
       $(".nav").css("display", "none");
       $(".nav2").css("display", "block");
     });
@@ -55,7 +57,7 @@ export class DashbordComponent implements OnInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event.url === '/test') {
+        if (event.url === '/coach-dashboard') {
           this.ShowCoach = true;
           
           

@@ -1,0 +1,190 @@
+<div style="overflow: auto;" class="content-body">
+    <div class="container-fluid">
+  
+  
+        <!-- row -->
+  <!-- Products Table -->
+  <div class="col-12">
+                
+         
+      
+  
+          <!-- Modal Add Category -->
+        <form >
+        <div class="modal fade none-border" id="add-category">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="title"><strong>Ajouter Coach</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="control-label ">Nom & Prénom</label>
+                      <input class="form-control form-white" placeholder="Enter Nom" type="text" id="Nom" name="nom"  required onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="control-label form-label">Spécialité</label>
+                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" id="Spécialité" name="dimension"  required>
+                    </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Téléphone</label>
+                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" id="Tel" name="contenance"   required>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Lien Facebook</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien FB" rows="4"required name="description">
+                        </div>
+                        <div class="col-md-6">
+                        <label class="control-label form-label">Lien Instagram</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien Instagram" rows="4"required name="description">
+                        </div>
+                        <div class="col-md-6">
+                        <label class="control-label form-label">Photo</label>
+                        
+                        <main class="main_full">
+                          <div class="container">
+                            <div class="panel">
+                              <div class="button_outer">
+                                <div class="btn_upload">
+                                  <input type="file" id="upload_file" name="photo">
+                                  Upload Image
+                                </div>
+                                <div class="processing_bar"></div>
+                                <div class="success_box"></div>
+                              </div>
+                            </div>
+                            <div class="error_msg"></div>
+                            <div class="uploaded_file_view" id="uploaded_view">
+                              <span class="file_remove">X</span>
+                            </div>
+                          </div>
+                        </main>
+                      </div>
+                      
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" (click)="AddCoach()"  name="save">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+  
+    
+  
+      <!-- Modal Edit Category -->
+      <form method="POST">
+        <div class="modal fade none-border" id="Edit-category">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="title"><strong>Modifier Coach</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="control-label form-label">Nom & Prénom</label>
+                      <input class="form-control form-white" placeholder="Enter Nom" type="text" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="control-label form-label">Spécialité</label>
+                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" name="dimension">
+                    </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Téléphone</label>
+                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" name="contenance">
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Lien Facebook</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien FB" rows="4"required name="description">
+                        </div>
+                        <div class="col-md-6">
+                        <label class="control-label form-label">Lien Instagram</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien Instagram" rows="4"required name="description">
+                        </div>
+                        <div class="col-md-6">
+                        <label class="control-label form-label">Photo</label>
+                        
+                        <main class="main_full">
+                          <div class="container">
+                            <div class="panel">
+                              <div class="button_outer">
+                                <div class="btn_upload">
+                                  <input type="file" id="upload_file" name="photo">
+                                  Upload Image
+                                </div>
+                                <div class="processing_bar"></div>
+                                <div class="success_box"></div>
+                              </div>
+                            </div>
+                            <div class="error_msg"></div>
+                            <div class="uploaded_file_view" id="uploaded_view">
+                              <span class="file_remove">X</span>
+                            </div>
+                          </div>
+                        </main>
+                      </div>
+                      
+                    </div>
+                </form>
+  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-bs-dismiss="modal">Close</button>
+                
+                <button type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal">Save
+  
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+                    
+                                <main class="table">
+                                    <section class="table__header">
+                                        <h3>Tableau des Coachs</h3>
+                                        <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#add-category" class="btn btn-primary btn-event w-100">
+                                        <span class="align-middle"><i class="ti-plus"></i></span> Ajouter Coach</a>
+                                    </section>
+                                    <section class="table__body">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th> Nom & Prénom <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Spécialité <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Téléphone <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Lien Facebook <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Lien Instagram <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Image <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Action <span class="icon-arrow">&UpArrow;</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let equipe of equipes">
+                                                    <td>{{equipe.name}}</td>
+                                                  <td>{{equipe.profession}}</td>
+                                                                          <td>{{equipe.tel}}</td>
+                                                                          <td>Lien Facebook</td>
+                                                                          <td>Lien Instagram</td>
+                                                                          <td><img height="60px" width="60px" [src]="equipe.image" alt=""></td>
+                                                
+                                                <td>
+                                    
+                                                        <div class="d-flex">	
+                                                    <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit-category" class="btn btn-primary shadow btn-xs sharp me-1">	
+                                                    <i class="fas fa-pencil-alt"></i></a>	
+                                                      <a href="" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                    </div>												
+                                                  </td>							
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>

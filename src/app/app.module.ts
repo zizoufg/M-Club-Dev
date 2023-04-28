@@ -40,6 +40,7 @@ import { ClientsDashboardComponent } from './Components/clients-dashboard/client
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModel } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { CoachDashboardComponent } from './Components/coach-dashboard/coach-dashboard.component';
 
 
 
@@ -70,6 +71,7 @@ import { FormBuilder } from '@angular/forms';
     ToolbarComponent,
     SidenavComponent,
     ClientsDashboardComponent,
+    CoachDashboardComponent,
     
     
   ],

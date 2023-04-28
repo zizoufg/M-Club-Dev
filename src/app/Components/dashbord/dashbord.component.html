@@ -1,13 +1,11 @@
 
 	<div id="mySidenav" class="sidenav">
-		<p class="logo"><span>M</span>-Club Admin</p>
+		<p class="logo"><span>M</span>-Club </p>
 	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
 	  <a style="cursor: pointer;" (click)="ShowCoach  = !ShowCoach"  class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Equipe</a>
 	  <a  class="icon-a" ><i class="fa fa-list icons"></i> &nbsp;&nbsp;Projects</a>
-	  <a class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
-	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Inventory</a>
 	  <a style="cursor: pointer;"  (click)="ShowClients  = !ShowClients"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
-	  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a>
+	  <a  href="" class="icon-a"><i class="fa fa-sign-in icons"   aria-hidden="true"></i> &nbsp;&nbsp; Log Out </a>
 	
 	</div>
 	<div id="main" >
@@ -22,14 +20,15 @@
 		<div class="profile">
 	
 			<img src="/assets/DSC0411.JPG" class="pro-img" />
-			<p>Manoj Adhikari <span>UI / UX DESIGNER</span></p>
-			<a  href=""><i class="fa fa-sign-in mr-5" style=" font-size:30px; color:#fff;" aria-hidden="true"></i></a>
+			<p>Manoj Adhikari <span> M-Club Admin </span></p>
+			
 		</div>
 		</div>
 		<div class="clearfix"></div>
 		</div >
 		<section  >
-			<app-test   id="test" *ngIf="ShowCoach" [variable]="ShowCoach"></app-test>
+			<!-- <app-test   id="test" *ngIf="ShowCoach" [variable]="ShowCoach"></app-test> -->
+			<app-coach-dashboard *ngIf="ShowCoach" [variable]="ShowCoach"></app-coach-dashboard>
 		<app-clients-dashboard id="client" *ngIf="ShowClients"></app-clients-dashboard>
 		</section>
 		
