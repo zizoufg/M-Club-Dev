@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EquipeService } from 'src/app/services/equipe.service';
 import { toArray } from 'rxjs';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-coach-dashboard',
   templateUrl: './coach-dashboard.component.html',
@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 })
 export class CoachDashboardComponent implements OnInit {
   equipes:any =[];
+  coach:any ={};
+  SelectedId:any;
+  
   @Input() variable:any ;
-  constructor(private router:Router, private EquipeService:EquipeService) { }
+  constructor(private router:Router, private EquipeService:EquipeService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.EquipeService.getAllEquipes() .pipe(
@@ -19,6 +22,9 @@ export class CoachDashboardComponent implements OnInit {
       this.equipes = data;
       this.equipes = this.equipes[0].equipes;
     });
+
+
+    
 
 
 
@@ -74,5 +80,33 @@ $(".file_remove").on("click", function(e){
     
 
   };
+  deleteCoach(id: string){
+    this.EquipeService.deleteEquipeById(id).subscribe(()=>{
+      this.EquipeService.getAllEquipes();
+    });
+    
+  }
+  editCoach( id:any ){
+      // this.SelectedId =localStorage.getItem("ID");
+     console.log(this.SelectedId);
+    const ModifierNom:any= document.getElementById("ModifierNom");
+    const ModifierSpecialite:any= document.getElementById("ModifierSpecialite");
+    const ModifierTel:any= document.getElementById("ModifierTel");
+
+    const ModifierNomVal:String =ModifierNom.value;
+    const ModifierSpecialiteVal:String = ModifierSpecialite.value;
+    const ModifierTelVal:String = ModifierTel.value;
+    this.coach = {name: ModifierNomVal, profession:ModifierSpecialiteVal, tel :ModifierTelVal };
+    console.log(this.coach);
+    this.EquipeService.editEquipe(this.coach,this.SelectedId).subscribe(()=>{
+      this.EquipeService.getAllEquipes();
+      console.log("helo");
+    });
+
+  }
+  sendData(id: any){
+    // localStorage.setItem("ID",id);
+    this.SelectedId = id ;
+  }
 
 }

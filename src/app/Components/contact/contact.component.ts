@@ -18,5 +18,9 @@ export class ContactComponent implements OnInit {
     
 
   }
+  Inscription(){
+    
+
+  }
 
 }

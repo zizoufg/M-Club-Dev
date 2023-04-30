@@ -13,16 +13,22 @@
         <form action="">
             <h1>Inscription</h1>
             <div>
-                <input type="text" placeholder="Nom"onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''">
-                <input type="text" placeholder="Prénom"  onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''">
+                <input type="text" placeholder="Nom"onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''" id="ClientNom">
+                <input type="text" placeholder="Prénom"  onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''" id="ClientPrenom">
             </div>
             <div>
-                <input type="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''">
-                <input type="tel" placeholder="Téléphone"  onblur="this.placeholder='Téléphone'" onfocus="this.placeholder=''">
+                <input type="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''" id="ClientEmail">
+                <input type="tel" placeholder="Téléphone"  onblur="this.placeholder='Téléphone'" onfocus="this.placeholder=''" id="ClientTel">
             </div>
             <div>
-                <input type="text" placeholder="Abonnement"  onblur="this.placeholder='Abonnement'" onfocus="this.placeholder=''">
-                <select name="Durée" id="" aria-placeholder="Durée"   >
+                <!-- <input type="text" placeholder="Abonnement"  onblur="this.placeholder='Abonnement'" onfocus="this.placeholder=''"> -->
+                <select aria-placeholder="Abonnement" name="Abonnement" id="Abonnement">
+                    <option value="" disabled selected>Abonnement </option>
+                    <option value="">Global</option>
+                    <option value="">Piscine</option>
+                    <option value="">Gym&Fitness</option>
+                </select>
+                <select name="Durée" id="Duree" aria-placeholder="Durée"   >
                     <option value="" disabled selected>Durée </option>
                     <option value="">3 mois </option>
                     <option value="">9 mois  </option>

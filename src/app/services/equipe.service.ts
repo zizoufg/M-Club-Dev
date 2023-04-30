@@ -25,7 +25,7 @@ export class EquipeService {
     return this.httpClient.post(this.equipeURL,equipe);
   }
   //Req to edit equipe //
-  editEquipe(newEquipe:any){
-    return this.httpClient.put(this.equipeURL+ '/'+ newEquipe.id,newEquipe);
+  editEquipe(newEquipe:any , id:any){
+    return this.httpClient.put(this.equipeURL+ '/'+id,newEquipe);
   }
 }

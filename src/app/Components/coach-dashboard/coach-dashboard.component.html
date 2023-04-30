@@ -91,15 +91,15 @@
                   <div class="row">
                     <div class="col-md-6">
                       <label class="control-label form-label">Nom & Prénom</label>
-                      <input class="form-control form-white" placeholder="Enter Nom" type="text" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
+                      <input class="form-control form-white" placeholder="Enter Nom" type="text" id="ModifierNom" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
                     </div>
                     <div class="col-md-6">
                       <label class="control-label form-label">Spécialité</label>
-                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" name="dimension">
+                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" id="ModifierSpecialite" name="dimension">
                     </div>
                       <div class="col-md-6">
                         <label class="control-label form-label">Téléphone</label>
-                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" name="contenance">
+                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" id="ModifierTel" name="contenance">
                       </div>
                       <div class="col-md-6">
                         <label class="control-label form-label">Lien Facebook</label>
@@ -139,7 +139,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default waves-effect" data-bs-dismiss="modal">Close</button>
                 
-                <button type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal">Save
+                <button (click)="editCoach(SelectedId)" type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal">Save
   
                 </button>
               </div>
@@ -168,7 +168,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr *ngFor="let equipe of equipes">
+                                                <tr *ngFor="let equipe of equipes ">
                                                     <td>{{equipe.name}}</td>
                                                   <td>{{equipe.profession}}</td>
                                                                           <td>{{equipe.tel}}</td>
@@ -179,9 +179,9 @@
                                                 <td>
                                     
                                                         <div class="d-flex">	
-                                                    <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit-category" class="btn btn-primary shadow btn-xs sharp me-1">	
+                                                    <a (click)="sendData(equipe._id)" href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit-category" class="btn btn-primary shadow btn-xs sharp me-1">	
                                                     <i class="fas fa-pencil-alt"></i></a>	
-                                                      <a href="" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                      <a  (click)="deleteCoach(equipe._id)" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                                     </div>												
                                                   </td>							
                                                 </tr>

@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 const Buvette = require("./models/buvette");
 //import equipe model 
 const Equipe = require("./models/equipe");
+//import client  model 
+const Client = require("./models/client");
 //mclubDB : database name 
 mongoose.connect('mongodb://localhost:27017/mclubDB');
 //CORS
@@ -211,6 +213,81 @@ app.get("/equipe/:id",(Req,res)=>{
    
     
 }) 
+//////////////////////////////////////////////Client/////////////////////////////////////////////////////
+
+//business  logic : Req 1 : =>  get equipe
+app.get("/client",(Req,res)=>{
+    console.log("Here BL : Req 1 client");
+
+    Client.find().then((docs) => {
+        res.json ({clients : docs})
+
+    });
+   
+
+});
+//business  logic : Req 2 : =>  create client
+app.post("/client",(Req,res)=>{
+    console.log("Here BL : Req 2 client ");
+    const x = Req.body;
+    let clientObj = new Client(x);
+    clientObj.save();
+
+
+
+    Client.find().then((docs) => {
+        res.json ({clients : docs})
+
+    });
+    
+
+    
+
+
+});
+//business logic : req 3: => edit client by id 
+app.put("/client/:id",(Req,res)=>{
+    var x = Req.params.id ;
+    console.log("Here BL : REQ to edit client by id ");
+    Client.updateOne({_id: x},Req.body).then((response) =>{
+        res.json({message : "updated with success"});
+    });
+
+
+
+
+
+   
+    
+   
+})
+//business logic : Rrq  4: => delete client by :id
+app.delete("/client/:id",(Req,res)=>{
+    console.log("HERE BL : REQ to delete client by id ");
+    var x = Req.params.id;
+    Client.deleteOne({_id: x }).then((response)=>{
+        res.json({message : "deleted with succes "});
+        
+    });
+
+
+
+
+  
+})
+//business logic : Rrq 5 : => get  client  by :id
+app.get("/client/:id",(Req,res)=>{
+    var id = Req.params.id;
+    Client.findOne({_id :id}).then((doc)=>{
+        res.json({client: doc});
+        
+    })
+   
+   
+    
+}) 
+
+
 
 
 
