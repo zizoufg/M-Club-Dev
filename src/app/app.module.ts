@@ -41,6 +41,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModel } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { CoachDashboardComponent } from './Components/coach-dashboard/coach-dashboard.component';
+import { AdherentDashboardComponent } from './Components/adherent-dashboard/adherent-dashboard.component';
 
 
 
@@ -72,6 +73,7 @@ import { CoachDashboardComponent } from './Components/coach-dashboard/coach-dash
     SidenavComponent,
     ClientsDashboardComponent,
     CoachDashboardComponent,
+    AdherentDashboardComponent,
     
     
   ],

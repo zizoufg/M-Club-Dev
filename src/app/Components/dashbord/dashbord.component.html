@@ -3,8 +3,8 @@
 		<p class="logo"><span>M</span>-Club </p>
 	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
 	  <a style="cursor: pointer;" (click)="ShowCoach  = !ShowCoach"  class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Equipe</a>
-	  <a  class="icon-a" ><i class="fa fa-list icons"></i> &nbsp;&nbsp;Projects</a>
-	  <a style="cursor: pointer;"  (click)="ShowClients  = !ShowClients"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
+	  <a style="cursor: pointer;" (click)="ShowAdherent = !ShowAdherent"  class="icon-a" ><i class="fa fa-user icons"></i> &nbsp;&nbsp;Adhérents</a>
+	  <a style="cursor: pointer;"  (click)="ShowClients  = !ShowClients"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Clients</a>
 	  <a  href="" class="icon-a"><i class="fa fa-sign-in icons"   aria-hidden="true"></i> &nbsp;&nbsp; Log Out </a>
 	
 	</div>
@@ -27,9 +27,10 @@
 		<div class="clearfix"></div>
 		</div >
 		<section  >
-			<!-- <app-test   id="test" *ngIf="ShowCoach" [variable]="ShowCoach"></app-test> -->
+			
 			<app-coach-dashboard *ngIf="ShowCoach" [variable]="ShowCoach"></app-coach-dashboard>
 		<app-clients-dashboard id="client" *ngIf="ShowClients"></app-clients-dashboard>
+		<app-adherent-dashboard *ngIf="ShowAdherent"></app-adherent-dashboard>
 		</section>
 		
 	

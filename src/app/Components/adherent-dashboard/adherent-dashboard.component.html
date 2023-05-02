@@ -1,0 +1,95 @@
+<main class="table">
+    <section class="table__header">
+        <h1>Tableau des Adhérents</h1>
+        <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="images/search.png" alt="">
+        </div>
+        
+    </section>
+    <section class="table__body">
+        <table>
+            <thead>
+                <tr>
+                    <th> Nom & Prénom <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Téléphone <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Abonnement <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Durée <span class="icon-arrow">&UpArrow;</span></th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody *ngFor="let adherent of  adherentTab">
+                <tr>
+                    <td> {{adherent.name}} </td>
+                    <td> {{adherent.email}} </td>
+                    <td> {{adherent.tel}} </td>
+                    <td> {{adherent.abonnement}} </td>
+                    <td> {{adherent.duree}} </td>
+                    <td>
+                                    
+                        <div class="d-flex">	
+                    <a (click)="sendData(adherent._id)" href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit-category" class="btn btn-primary shadow btn-xs sharp me-1">	
+                    <i class="fas fa-pencil-alt"></i></a>	
+                      <a  (click)="deleteAdherent(adherent._id)" style="cursor: pointer; margin-left: 15px;" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                    </div>												
+                  </td>	
+                   
+                    
+                </tr>
+              
+            </tbody>
+        </table>
+
+          <!-- Modal Edit Category -->
+      <form method="POST">
+        <div class="modal fade none-border" id="Edit-category">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="title"><strong>Modifier Adhérent</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="control-label form-label">Nom & Prénom</label>
+                      <input class="form-control form-white" placeholder="Enter Nom" type="text" id="ModifierAdherentName" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="control-label form-label">Email</label>
+                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" id="ModifierAdherentEmail" name="dimension">
+                    </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Téléphone</label>
+                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" id="ModifierAdherentTel" name="contenance">
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label form-label">Abonnement</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien FB" id="ModifierAdherentAbonnement" rows="4"required name="description">
+                        </div>
+                        <div class="col-md-6">
+                        <label class="control-label form-label">Durée</label>
+                        <input class="form-control form-white"  placeholder="Enter Lien Instagram" id="ModifierAdherentDuree" rows="4"required name="description">
+                        </div>
+                       
+                      
+                    </div>
+                </form>
+  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-bs-dismiss="modal">Close</button>
+                
+                <button (click)="editAdherent(SelectedId)" type="submit" class="btn btn-danger waves-effect waves-light save-category" data-bs-toggle="modal">Save
+  
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+              
+    </section>
+  </main>

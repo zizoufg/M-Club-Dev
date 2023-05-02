@@ -259,3 +259,32 @@ option{
 
     color: black;
 }
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #countdown span {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  #countdown span:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 480px) {
+    #countdown {
+      font-size: 18px;
+    }
+    
+    #countdown span {
+      padding: 5px;
+    }
+  }

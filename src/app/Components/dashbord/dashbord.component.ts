@@ -14,6 +14,7 @@ export class DashbordComponent implements OnInit {
   sideBarOpen = true;
   ShowCoach = false;
   ShowClients = false;
+  ShowAdherent = false ;
 
   ngOnInit(): void {
     const x = document.getElementById("body");
@@ -64,10 +65,10 @@ export class DashbordComponent implements OnInit {
         } 
         if (event.url === '/clients-dashboard') {
           this.ShowClients = true;
-          
-          
-          
-        } 
+         } 
+         if (event.url === '/adherents-dashboard') {
+          this.ShowAdherent = true;
+         } 
         
         // else {
           

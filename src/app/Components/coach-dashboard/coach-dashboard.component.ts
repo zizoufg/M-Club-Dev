@@ -87,8 +87,7 @@ $(".file_remove").on("click", function(e){
     
   }
   editCoach( id:any ){
-      // this.SelectedId =localStorage.getItem("ID");
-     console.log(this.SelectedId);
+    
     const ModifierNom:any= document.getElementById("ModifierNom");
     const ModifierSpecialite:any= document.getElementById("ModifierSpecialite");
     const ModifierTel:any= document.getElementById("ModifierTel");
@@ -100,7 +99,7 @@ $(".file_remove").on("click", function(e){
     console.log(this.coach);
     this.EquipeService.editEquipe(this.coach,this.SelectedId).subscribe(()=>{
       this.EquipeService.getAllEquipes();
-      console.log("helo");
+     
     });
 
   }

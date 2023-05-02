@@ -10,6 +10,8 @@ const Buvette = require("./models/buvette");
 const Equipe = require("./models/equipe");
 //import client  model 
 const Client = require("./models/client");
+//import adherent model 
+const Adherent = require("./models/adherent");
 //mclubDB : database name 
 mongoose.connect('mongodb://localhost:27017/mclubDB');
 //CORS
@@ -280,6 +282,85 @@ app.get("/client/:id",(Req,res)=>{
     var id = Req.params.id;
     Client.findOne({_id :id}).then((doc)=>{
         res.json({client: doc});
+        
+    })
+   
+   
+    
+}) 
+
+
+
+
+
+
+////////////////////////////////////////////////////Adherent///////////////////////////////////////////////
+
+//business  logic : Req 1 : =>  get adherent
+app.get("/adherent",(Req,res)=>{
+    console.log("Here BL : Req 1 adherent");
+
+    Adherent.find().then((docs) => {
+        res.json ({adherents : docs})
+
+    });
+   
+
+});
+//business  logic : Req 2 : =>  create adherent
+app.post("/adherent",(Req,res)=>{
+    console.log("Here BL : Req 2 create adherent ");
+    const x = Req.body;
+    let adherentObj = new Adherent(x);
+    adherentObj.save();
+
+
+
+    Adherent.find().then((docs) => {
+        res.json ({adherents : docs})
+
+    });
+    
+
+    
+
+
+});
+//business logic : req 3: => edit adherent by id 
+app.put("/adherent/:id",(Req,res)=>{
+    var x = Req.params.id ;
+    console.log("Here BL : REQ to edit adherent by id ");
+    Adherent.updateOne({_id: x},Req.body).then((response) =>{
+        res.json({message : "updated with success"});
+    });
+
+
+
+
+
+   
+    
+   
+})
+//business logic : Rrq  4: => delete adherent by :id
+app.delete("/adherent/:id",(Req,res)=>{
+    console.log("HERE BL : REQ to delete adherent by id ");
+    var x = Req.params.id;
+    Adherent.deleteOne({_id: x }).then((response)=>{
+        res.json({message : "deleted with succes "});
+        
+    });
+
+
+
+
+  
+})
+//business logic : Rrq 5 : => get  adherent  by :id
+app.get("/adherent/:id",(Req,res)=>{
+    var id = Req.params.id;
+    Adherent.findOne({_id :id}).then((doc)=>{
+        res.json({adherent: doc});
         
     })
    

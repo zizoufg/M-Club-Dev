@@ -18,6 +18,7 @@ import { TestComponent } from './Components/test/test.component';
 import { TestUserComponent } from './Components/test-user/test-user.component';
 import { ClientsDashboardComponent } from './Components/clients-dashboard/clients-dashboard.component';
 import { CoachDashboardComponent } from './Components/coach-dashboard/coach-dashboard.component';
+import { AdherentDashboardComponent } from './Components/adherent-dashboard/adherent-dashboard.component';
 
 const routes: Routes = [{path:'',component:HomeComponent},
 {path:'header',component:HeaderComponent},
@@ -35,7 +36,8 @@ const routes: Routes = [{path:'',component:HomeComponent},
 {path: 'test',component:TestComponent},
 {path:'test-user',component:TestUserComponent},
 {path:'clients-dashboard',component:ClientsDashboardComponent},
-{path:'coach-dashboard',component:CoachDashboardComponent}];
+{path:'coach-dashboard',component:CoachDashboardComponent},
+{path:'adherents-dashboard',component:AdherentDashboardComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
