@@ -28,11 +28,41 @@ deleteAdherent(id:any){
     this.AdherentService.getAllAdherents();
   });;
 }
-sendData(id:any){
+async sendData(id:any){
+  interface AdherentDocument {
+    _id: string;
+    name: string;
+    email: string;
+    tel: string;
+    abonnement:string;
+    duree: string;
+   
+  }
   this.SelectedId = id ;
+  const selectedAdherent: any = await  this.AdherentService.getAdherentById(this.SelectedId).toPromise() ;
+  const Name:any= document.getElementById("ModifierAdherentName") as HTMLInputElement;
+  const Email:any = document.getElementById("ModifierAdherentEmail") as HTMLInputElement;
+  const Tel:any = document.getElementById("ModifierAdherentTel") as HTMLInputElement;
+  const Abonnement:any = document.getElementById("ModifierAdherentAbonnement") as HTMLInputElement;
+  const Duree:any= document.getElementById("ModifierAdherentDuree") as HTMLInputElement;
+
+  Name.value =selectedAdherent.adherent.name ;
+   Email.value= selectedAdherent.adherent.email;
+   Tel.value=selectedAdherent.adherent.tel; 
+   Abonnement.value =selectedAdherent.adherent.abonnement;
+   Duree.value=selectedAdherent.adherent.duree;
+   
+   
+   
+   
+ 
+  
+  
+  
+
 }
 editAdherent(id:any){
-  this.SelectedId = id ;
+ 
   const Name:any= document.getElementById("ModifierAdherentName");
     const Email:any = document.getElementById("ModifierAdherentEmail");
     const Tel:any = document.getElementById("ModifierAdherentTel");
@@ -46,6 +76,7 @@ editAdherent(id:any){
     const DureeVal:any = Duree.value;
     this.adherent = {name:NameVal , email: EmailVal, tel:TelVal, abonnement:AbonnementVal, duree:DureeVal};
     console.log(this.adherent);
-    this.AdherentService.editAdherent(this.adherent ,this.SelectedId).subscribe();
+    this.AdherentService.editAdherent(this.adherent ,id).subscribe();
+    location.reload();
 }
 }

@@ -32,6 +32,7 @@
   color: #818181;
   display: block;
   transition: 0.3s;
+  font-family: "Montserrat";
 }
 .sidenav a:hover {
   color: #f1f1f1;
@@ -54,10 +55,12 @@
 }
 .head{
 	padding:20px;
+  
 }
 .col-div-6{
 	width: 50%;
 	float: left;
+ 
 }
 .profile{
     position: absolute;
@@ -78,48 +81,19 @@
 	color: white;
 	font-weight: 500;
 	margin-left: 55px;
-	margin-top: 10px;
-	font-size: 13.5px;
+	margin-top: 15px;
+	font-size: 12px;
+  font-family: "Montserrat";
 }
 .profile p span{
 	font-weight: 400;
     font-size: 12px;
     display: block;
     color: #8e8b8b;
+    font-family: "Montserrat";
+    margin-top: 3px;
 }
-.col-div-3{
-	width: 25%;
-	float: left;
-}
-.box{
-	width: 85%;
-	height: 100px;
-	background-color: #272c4a;
-	margin-left: 10px;
-	padding:10px;
-  
-}
-.box p{
-	 font-size: 35px;
-    color: white;
-    font-weight: bold;
-    line-height: 30px;
-    padding-left: 10px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.box p span{
-	font-size: 20px;
-	font-weight: 400;
-	color: #818181;
-}
-.box-icon{
-	font-size: 40px!important;
-    float: right;
-    margin-top: 35px!important;
-    color: #818181;
-    padding-right: 10px;
-}
+
 .col-div-8{
 	width: 70%;
 	float: left;
@@ -150,6 +124,7 @@
 }
 .nav2{
 	display: none;
+  font-family: "Montserrat";
 }
 
 .box-8{
@@ -167,4 +142,10 @@ td, th {
   padding:15px;
   color: #ddd;
   border-bottom: 1px solid #81818140;
+}
+.hide{
+  display: none !important;
+}
+.nav{
+  font-family: "Montserrat";
 }

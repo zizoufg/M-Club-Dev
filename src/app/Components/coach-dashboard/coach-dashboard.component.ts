@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EquipeService } from 'src/app/services/equipe.service';
 import { toArray } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,6 +12,8 @@ export class CoachDashboardComponent implements OnInit {
   coach:any ={};
   SelectedId:any;
   
+  
+  
   @Input() variable:any ;
   constructor(private router:Router, private EquipeService:EquipeService, private activatedRoute:ActivatedRoute) { }
 
@@ -22,6 +24,8 @@ export class CoachDashboardComponent implements OnInit {
       this.equipes = data;
       this.equipes = this.equipes[0].equipes;
     });
+
+    
 
 
     
@@ -59,7 +63,7 @@ $(".file_remove").on("click", function(e){
 
 
 
-  AddCoach(){
+  async AddCoach(){
     const name:any = document.getElementById("Nom");
     const specialité:any = document.getElementById("Spécialité");
     const Tel:any = document.getElementById("Tel");
@@ -69,11 +73,24 @@ $(".file_remove").on("click", function(e){
      const TelVal:String = Tel.value;
    //Request
     const Req:any = {name:nameVal,profession:specialitéVal ,tel:TelVal };
-
-    this.EquipeService.addEquipe(Req).subscribe((equipe) => {
+    
+     this.EquipeService.addEquipe(Req).subscribe(  (equipe) => {
       console.log(`Equipe added: ${equipe}`);
       
+      
+      location.reload();
+      
+      
+      
+      
+
+     
+      
+      
+      
+      
     });
+    
 
     
     this.variable = true;
@@ -82,7 +99,9 @@ $(".file_remove").on("click", function(e){
   };
   deleteCoach(id: string){
     this.EquipeService.deleteEquipeById(id).subscribe(()=>{
+      location.reload();
       this.EquipeService.getAllEquipes();
+      
     });
     
   }
@@ -98,7 +117,11 @@ $(".file_remove").on("click", function(e){
     this.coach = {name: ModifierNomVal, profession:ModifierSpecialiteVal, tel :ModifierTelVal };
     console.log(this.coach);
     this.EquipeService.editEquipe(this.coach,this.SelectedId).subscribe(()=>{
+      location.reload();
       this.EquipeService.getAllEquipes();
+      
+
+      
      
     });
 

@@ -30,7 +30,7 @@
                     <td>
                                     
                         <div class="d-flex">	
-                    <a (click)="sendData(adherent._id)" href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit-category" class="btn btn-primary shadow btn-xs sharp me-1">	
+                    <a (click)="sendData(adherent._id)" href="javascript:void()" data-bs-toggle="modal" data-bs-target="#Edit1-category" class="btn btn-primary shadow btn-xs sharp me-1">	
                     <i class="fas fa-pencil-alt"></i></a>	
                       <a  (click)="deleteAdherent(adherent._id)" style="cursor: pointer; margin-left: 15px;" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                     </div>												
@@ -44,7 +44,7 @@
 
           <!-- Modal Edit Category -->
       <form method="POST">
-        <div class="modal fade none-border" id="Edit-category">
+        <div class="modal fade none-border" id="Edit1-category">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -55,23 +55,23 @@
                   <div class="row">
                     <div class="col-md-6">
                       <label class="control-label form-label">Nom & Prénom</label>
-                      <input class="form-control form-white" placeholder="Enter Nom" type="text" id="ModifierAdherentName" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
+                      <input  class="form-control form-white" placeholder="Enter Nom" type="text" id="ModifierAdherentName" name="nom" onfocus="this.placeholder=''" onblur="this.placeholder='Entrez Nom & Prénom'">
                     </div>
                     <div class="col-md-6">
                       <label class="control-label form-label">Email</label>
-                      <input class="form-control form-white" placeholder="Enter Spécialité" type="text" id="ModifierAdherentEmail" name="dimension">
+                      <input  class="form-control form-white" placeholder="Enter Email" type="text" id="ModifierAdherentEmail" name="dimension">
                     </div>
                       <div class="col-md-6">
                         <label class="control-label form-label">Téléphone</label>
-                        <input class="form-control form-white" placeholder="Enter Numéro" type="text" id="ModifierAdherentTel" name="contenance">
+                        <input  class="form-control form-white" placeholder="Enter Numéro" type="text" id="ModifierAdherentTel" name="contenance">
                       </div>
                       <div class="col-md-6">
                         <label class="control-label form-label">Abonnement</label>
-                        <input class="form-control form-white"  placeholder="Enter Lien FB" id="ModifierAdherentAbonnement" rows="4"required name="description">
+                        <input class="form-control form-white"  placeholder="Enter Abonnement" id="ModifierAdherentAbonnement" rows="4"required name="description">
                         </div>
                         <div class="col-md-6">
-                        <label class="control-label form-label">Durée</label>
-                        <input class="form-control form-white"  placeholder="Enter Lien Instagram" id="ModifierAdherentDuree" rows="4"required name="description">
+                        <label  class="control-label form-label">Durée</label>
+                        <input  class="form-control form-white"  placeholder="Enter Durée" id="ModifierAdherentDuree" rows="4"required name="description">
                         </div>
                        
                       

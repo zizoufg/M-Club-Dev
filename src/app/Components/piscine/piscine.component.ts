@@ -17,7 +17,7 @@ export class PiscineComponent implements OnInit {
 
 
     const triggerElement = document.getElementById("trigger");
-    const targetElement = document.getElementById("target");
+    const targetElement = document.getElementById("target2");
 
 let originalDisplayValue = targetElement!.style.display;
 
@@ -33,7 +33,6 @@ triggerElement!.addEventListener("mouseout", () => {
   targetElement!.style.display = originalDisplayValue;
   targetElement!.style.opacity = "1";
 });
-
 
 
 //////////////////////////piscineTab///////////////////////////////////

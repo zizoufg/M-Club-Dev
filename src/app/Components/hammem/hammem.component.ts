@@ -17,7 +17,7 @@ export class HammemComponent implements OnInit {
 
 
     const triggerElement = document.getElementById("trigger");
-    const targetElement = document.getElementById("target");
+    const targetElement = document.getElementById("target3");
 
 let originalDisplayValue = targetElement!.style.display;
 

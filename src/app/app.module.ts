@@ -42,6 +42,7 @@ import { NgModel } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { CoachDashboardComponent } from './Components/coach-dashboard/coach-dashboard.component';
 import { AdherentDashboardComponent } from './Components/adherent-dashboard/adherent-dashboard.component';
+import { DashboardMainComponent } from './Components/dashboard-main/dashboard-main.component';
 
 
 
@@ -74,6 +75,7 @@ import { AdherentDashboardComponent } from './Components/adherent-dashboard/adhe
     ClientsDashboardComponent,
     CoachDashboardComponent,
     AdherentDashboardComponent,
+    DashboardMainComponent,
     
     
   ],

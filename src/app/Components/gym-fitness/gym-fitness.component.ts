@@ -18,7 +18,7 @@ export class GymFitnessComponent implements OnInit {
 
 
     const triggerElement = document.getElementById("trigger");
-    const targetElement = document.getElementById("target");
+    const targetElement = document.getElementById("target1");
 
 let originalDisplayValue = targetElement!.style.display;
 

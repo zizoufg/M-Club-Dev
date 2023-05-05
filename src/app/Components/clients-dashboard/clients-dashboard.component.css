@@ -10,7 +10,10 @@ Code written by:
 */
 
 
-
+h1{
+  font-family: "Montserrat";
+  font-weight: 500;
+}
 main.table {
   width: 100%;
   height: 70vh;
@@ -111,6 +114,10 @@ table, th, td {
   border-collapse: collapse;
   padding: 1rem;
   text-align: left;
+  font-family: "Montserrat";
+}
+td{
+  font-size: 16px;
 }
 
 thead th {
@@ -120,6 +127,7 @@ thead th {
   background-color: #d5d1defe;
   cursor: pointer;
   text-transform: capitalize;
+  font-family: "Montserrat";
 }
 
 tbody tr:nth-child(even) {
@@ -231,11 +239,11 @@ thead th.active,tbody td.active {
   color:black;
   border: none;
   cursor: pointer;
-  width: 70%;
+  width: 85%;
   height: 37px;
   border-radius: 50px;
   font-family: 'Montserrat';
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .bouton.active {

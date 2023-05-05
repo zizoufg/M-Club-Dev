@@ -153,7 +153,9 @@
   font-family: Montserrat
 }
 .h1, h1 {
-  font-size: calc(1.35rem + 1.2vw)
+ font-family: "Montserrat";
+ font-size: 20px;
+ font-weight: 500;
 }
 
 .h2, h2 {
