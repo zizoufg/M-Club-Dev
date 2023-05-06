@@ -42,12 +42,12 @@
     <th>Message</th>
     <th>Action</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td><p><span>Voir Message </span></p></td>
-    <td> <a   style="cursor: pointer; margin-left: 24px;" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a></td>
+  <tr *ngFor="let notification of notificationTab">
+    <td>{{notification.name}}</td>
+    <td>{{notification.email}}</td>
+    <td>{{notification.tel}}</td>
+    <td><p><span (click)="OpenMessage(notification._id)">Voir Message </span></p></td>
+    <td> <a  (click)="deleteNotification(notification._id)"  style="cursor: pointer; margin-left: 24px;" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a></td>
     
   </tr>
  
@@ -56,3 +56,23 @@
 		</div>
 	</div>
 	</div>
+
+
+
+    <div class="popup1">
+        <button id="fermer">&times;</button>
+        <h2>Attention !</h2>
+        <p>
+         vous voulez vraiment  supprimer ce message ?
+        </p>
+        <a id="continuer" >Continuer</a>
+    </div>
+
+    <div class="popup3">
+        <button id="fermer3">&times;</button>
+        <h2></h2>
+        <p>
+         
+        </p>
+        
+    </div>

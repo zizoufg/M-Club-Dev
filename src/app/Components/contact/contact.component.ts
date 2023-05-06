@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { url } from 'inspector';
 import { URL } from 'url';
 import { ClientService } from 'src/app/services/client.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,8 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class ContactComponent implements OnInit {
   client:any ={};
-  constructor(private ClientService :ClientService) { }
+  feedback:any ={};
+  constructor(private ClientService :ClientService, private NotificationService:NotificationService) { }
 
   ngOnInit(): void {
     
@@ -85,11 +87,31 @@ startCountdown();
       console.log(`Client added: ${Client}`);
       
     });
+    location.reload();
 
 
 
     
 
+  }
+  FeedBack(){
+    const Nom:any = document.getElementById("feedNom");
+    const Prenom:any = document.getElementById("feedPrenom");
+    const Email:any = document.getElementById("feedEmail");
+    const Tel:any = document.getElementById("feedTel");
+    const Message:any = document.getElementById("feedMessage");
+
+    const NameVal:any = Nom.value+' '+Prenom.value;
+    const EmailVal:any = Email.value;
+    const TelVal:any = Tel.value;
+    const MessageVal:any = Message.value;
+    this.feedback = { name:NameVal, email:EmailVal,tel:TelVal,message:MessageVal};
+    this.NotificationService.addNotification(this.feedback).subscribe((notification)=>{
+      console.log(`notification added : ${notification}`);
+    })
+    location.reload();
+    
+    
   }
 
 }

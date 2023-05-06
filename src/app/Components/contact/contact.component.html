@@ -45,16 +45,16 @@
             <form action="">
                 <h1>Contactez-nous </h1>
                 <div>
-                    <input type="text" placeholder="Nom" onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''">
-                    <input type="text" placeholder="Prénom" onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''">
+                    <input id="feedNom" type="text" placeholder="Nom" onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''">
+                    <input id="feedPrenom" type="text" placeholder="Prénom" onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''">
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" onblur="this.placholder=this.placeholder='Email'" onfocus="this.placeholder=''">
-                    <input type="tel" placeholder="Téléphone" onblur="this.placholder=this.placeholder='Téléphone'" onfocus="this.placeholder=''">
+                    <input id="feedEmail" type="email" placeholder="Email" onblur="this.placholder=this.placeholder='Email'" onfocus="this.placeholder=''">
+                    <input id="feedTel" type="tel" placeholder="Téléphone" onblur="this.placholder=this.placeholder='Téléphone'" onfocus="this.placeholder=''">
                 </div>
                 <div>
-                    <textarea name="" id=""  placeholder="Message" onblur="this.placholder=this.placeholder='Message'" onfocus="this.placeholder=''"></textarea>
-                    <a href="#" class="btn">Envoyer</a>
+                    <textarea  name="" id="feedMessage"  placeholder="Message" onblur="this.placholder=this.placeholder='Message'" onfocus="this.placeholder=''"></textarea>
+                    <a (click)="FeedBack()" class="btn">Envoyer</a>
                 </div>
 
             </form>

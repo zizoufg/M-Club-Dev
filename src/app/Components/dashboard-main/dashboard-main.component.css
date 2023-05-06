@@ -104,3 +104,119 @@ th{
 td{
     font-size: 14px;
 }
+
+
+.popup1 {
+    background-color: #ffffff;
+    width: 450px;
+    padding: 20px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 9999999;
+}
+.popup3{
+    background-color: #ffffff;
+    width: 550px;
+    padding: 20px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 9999999; 
+}
+.popup1 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup1 h2{
+  font-size: 40px;
+  font-family: 'Gabriola';
+ color: red;
+  line-height: 25px;
+  margin-top: -20px;
+}
+.popup1 p{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    margin: 20px 0;
+    line-height: 25px;
+}
+.popup1 a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Montserrat';
+    background-color: #00000065;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.popup1 a:hover{
+color: black;
+background-color:#fcc233;
+transition: 0.3s;
+}
+
+
+.popup3 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup3 h2{
+  font-size: 40px;
+  font-family: 'Gabriola';
+ color: red;
+  line-height: 25px;
+  margin-top: -20px;
+}
+.popup3 p{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    margin: 20px 0;
+    line-height: 25px;
+}
+.popup3 a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Montserrat';
+    background-color: #00000065;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.popup3 a:hover{
+color: black;
+background-color:#fcc233;
+transition: 0.3s;
+}

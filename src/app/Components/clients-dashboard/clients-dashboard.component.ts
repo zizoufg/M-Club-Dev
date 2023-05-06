@@ -67,6 +67,13 @@ buttons.forEach((button) => {
      await this.AdherentService.addAdherent(documentToCopy.client as unknown as AdherentDocument).toPromise();
      await this.ClientService.deleteClientById(id).toPromise();
     this.clientsTab = await this.ClientService.getAllClients().toPromise();
+    
+    setTimeout(
+      function open(event){
+         location.reload();
+      },
+      2000
+  )
     }
   });
 });

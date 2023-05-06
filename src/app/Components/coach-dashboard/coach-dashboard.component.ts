@@ -98,11 +98,22 @@ $(".file_remove").on("click", function(e){
 
   };
   deleteCoach(id: string){
-    this.EquipeService.deleteEquipeById(id).subscribe(()=>{
-      location.reload();
-      this.EquipeService.getAllEquipes();
-      
-    });
+    document.querySelector<HTMLElement>(".popup2")!.style.display = "block";
+    const continuer = document.getElementById("continuer2");
+    continuer?.addEventListener("click",()=>{
+      this.EquipeService.deleteEquipeById(id).subscribe(()=>{
+        location.reload();
+        this.EquipeService.getAllEquipes();
+        
+      });
+     
+  
+    })
+    const fermer = document.getElementById("fermer2");
+    fermer?.addEventListener("click",()=>{
+      document.querySelector<HTMLElement>(".popup2")!.style.display = "none";
+    })
+   
     
   }
   editCoach( id:any ){

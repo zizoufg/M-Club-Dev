@@ -24,9 +24,21 @@ export class AdherentDashboardComponent implements OnInit {
 
 }
 deleteAdherent(id:any){
-  this.AdherentService.deleteAdherentById(id).subscribe(()=>{
-    this.AdherentService.getAllAdherents();
-  });;
+  document.querySelector<HTMLElement>(".popup4")!.style.display = "block";
+  const continuer = document.getElementById("continuer4");
+  continuer?.addEventListener("click",()=>{
+    
+    this.AdherentService.deleteAdherentById(id).subscribe(()=>{
+      this.AdherentService.getAllAdherents();
+    });
+    location.reload();
+
+  })
+  const fermer = document.getElementById("fermer4");
+    fermer?.addEventListener("click",()=>{
+      document.querySelector<HTMLElement>(".popup4")!.style.display = "none";
+    })
+ 
 }
 async sendData(id:any){
   interface AdherentDocument {

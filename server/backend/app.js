@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 //import buvette model 
 const Buvette = require("./models/buvette");
+//import Notification model 
+const Notification = require("./models/notification");
 //import equipe model 
 const Equipe = require("./models/equipe");
 //import client  model 
@@ -361,6 +363,84 @@ app.get("/adherent/:id",(Req,res)=>{
     var id = Req.params.id;
     Adherent.findOne({_id :id}).then((doc)=>{
         res.json({adherent: doc});
+        
+    })
+   
+   
+    
+}) 
+
+
+
+
+
+////////////////////////////////////////////////////Notification///////////////////////////////////////////////
+
+//business  logic : Req 1 : =>  get notifications
+app.get("/notification",(Req,res)=>{
+    console.log("Here BL : Req 1 notification");
+
+    Notification.find().then((docs) => {
+        res.json ({notifications : docs})
+
+    });
+   
+
+});
+//business  logic : Req 2 : =>  create notification
+app.post("/notification",(Req,res)=>{
+    console.log("Here BL : Req 2 create notification ");
+    const x = Req.body;
+    let notificationObj = new Notification(x);
+    notificationObj.save();
+
+
+
+   Notification.find().then((docs) => {
+        res.json ({notifications : docs})
+
+    });
+    
+
+    
+
+
+});
+//business logic : req 3: => edit notification by id 
+app.put("/notification/:id",(Req,res)=>{
+    var x = Req.params.id ;
+    console.log("Here BL : REQ to edit notification by id ");
+    Notification.updateOne({_id: x},Req.body).then((response) =>{
+        res.json({message : "updated with success"});
+    });
+
+
+
+
+
+   
+    
+   
+})
+//business logic : Rrq  4: => delete notification by :id
+app.delete("/notification/:id",(Req,res)=>{
+    console.log("HERE BL : REQ to delete notification by id ");
+    var x = Req.params.id;
+    Notification.deleteOne({_id: x }).then((response)=>{
+        res.json({message : "deleted with succes "});
+        
+    });
+
+
+
+
+  
+})
+//business logic : Rrq 5 : => get  notification by :id
+app.get("/notification/:id",(Req,res)=>{
+    var id = Req.params.id;
+    Notification.findOne({_id :id}).then((doc)=>{
+        res.json({notification: doc});
         
     })
    
