@@ -118,9 +118,9 @@ $(".file_remove").on("click", function(e){
   }
   editCoach( id:any ){
     
-    const ModifierNom:any= document.getElementById("ModifierNom");
-    const ModifierSpecialite:any= document.getElementById("ModifierSpecialite");
-    const ModifierTel:any= document.getElementById("ModifierTel");
+    const ModifierNom:any= document.getElementById("ModifierCoachName");
+    const ModifierSpecialite:any= document.getElementById("ModifierCoachSpecialite");
+    const ModifierTel:any= document.getElementById("ModifierCoachTel");
 
     const ModifierNomVal:String =ModifierNom.value;
     const ModifierSpecialiteVal:String = ModifierSpecialite.value;
@@ -137,9 +137,17 @@ $(".file_remove").on("click", function(e){
     });
 
   }
-  sendData(id: any){
+  async sendData(id: any){
     // localStorage.setItem("ID",id);
     this.SelectedId = id ;
+    const selectedCoach: any = await  this.EquipeService.getEquipeById(this.SelectedId).toPromise() ;
+    const Name:any= document.getElementById("ModifierCoachName") as HTMLInputElement;
+    const Spécialité:any = document.getElementById("ModifierCoachSpecialite");
+    const Tel:any = document.getElementById("ModifierCoachTel") as HTMLInputElement;
+    Name.value = selectedCoach.equipe.name;
+    Spécialité.value = selectedCoach.equipe.profession;
+    Tel.value =selectedCoach.equipe.tel;
+   
   }
 
 }

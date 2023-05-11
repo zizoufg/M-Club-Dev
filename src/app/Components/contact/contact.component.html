@@ -10,25 +10,25 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.91244561925!2d10.704819415057374!3d34.782979380413416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301d5b3d2064e7f%3A0xd9d31c80e9fc9f00!2sM%20club!5e0!3m2!1sfr!2stn!4v1680014373633!5m2!1sfr!2stn" width="90%" height="450'" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="formulaire" id="myInput">
-        <form action="">
+        <form action="" [formGroup]="signupForm">
             <h1>Inscription</h1>
             <div>
-                <input required type="text" placeholder="Nom"onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''" id="ClientNom">
-                <input required type="text" placeholder="Prénom"  onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''" id="ClientPrenom">
+                <input formControlName="fName" required type="text" placeholder="Nom"onblur="this.placholder=this.placeholder='Nom'" onfocus="this.placeholder=''" id="ClientNom">
+                <input formControlName="lName" required type="text" placeholder="Prénom"  onblur="this.placholder=this.placeholder='Prénom'" onfocus="this.placeholder=''" id="ClientPrenom">
             </div>
             <div>
-                <input required type="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''" id="ClientEmail">
+                <input formControlName="email"  required type="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''" id="ClientEmail">
                 <input type="tel" placeholder="Téléphone"  onblur="this.placeholder='Téléphone'" onfocus="this.placeholder=''" id="ClientTel">
             </div>
             <div>
                 <!-- <input type="text" placeholder="Abonnement"  onblur="this.placeholder='Abonnement'" onfocus="this.placeholder=''"> -->
-                <select required aria-placeholder="Abonnement" name="Abonnement" id="ClientAbonnement">
-                    <option value="" disabled selected>Abonnement </option>
+                <select formControlName="abonnement" required  name="Abonnement" id="ClientAbonnement">
+                    <option id="selectedAbn" value="" disabled selected>Abonnement </option>
                     <option value="Global">Global</option>
                     <option value="Piscine">Piscine</option>
                     <option value="Gym&Fitness">Gym&Fitness</option>
                 </select>
-                <select required name="Durée" id="ClientDuree" aria-placeholder="Durée"   >
+                <select formControlName="duree" required name="Durée" id="ClientDuree"    >
                     <option value="" disabled selected>Durée </option>
                     <option value="3 mois">3 mois </option>
                     <option value=" 6 mois">6 mois  </option>

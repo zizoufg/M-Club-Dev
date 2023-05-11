@@ -1,4 +1,11 @@
-
+.placeholder{
+    
+    font-size: 20px;
+}
+.placeholder::placeholder{
+    color: red !important;
+    font-size: 15px !important;
+}
 .intro{
     position: relative;
     margin: auto;
@@ -125,6 +132,7 @@ select,input {
             width: 40%;
             height: 35px
 }
+
 select[name="Durée"]{
     background: rgba(0, 0, 0, 0.349);
     color: #898989;

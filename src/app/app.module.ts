@@ -26,7 +26,7 @@ import { PlanComponent } from './Components/plan/plan.component';
 import { LoginComponent } from './Components/login/login.component';
 import { DashbordComponent } from './Components/dashbord/dashbord.component';
 import { AuthGuard } from './services/auth-guard.service'; // Import the AuthGuard service
-import { FormGroup, FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToolbarComponent } from './Components/toolbar/toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // import the FormsModule
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -93,7 +93,8 @@ import { DashboardMainComponent } from './Components/dashboard-main/dashboard-ma
     MatDividerModule,
     MatListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
      
    
     

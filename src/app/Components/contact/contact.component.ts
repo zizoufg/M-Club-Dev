@@ -3,6 +3,9 @@ import { url } from 'inspector';
 import { URL } from 'url';
 import { ClientService } from 'src/app/services/client.service';
 import { NotificationService } from 'src/app/services/notification.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+import { PlaceholderPiece } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-contact',
@@ -10,12 +13,25 @@ import { NotificationService } from 'src/app/services/notification.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  signupForm!:FormGroup;
   client:any ={};
   feedback:any ={};
-  constructor(private ClientService :ClientService, private NotificationService:NotificationService) { }
+  constructor(private ClientService :ClientService, private NotificationService:NotificationService, private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-    
+    ////////Controle des inputs d'inscription ///////////////////
+    this.signupForm=this.formBuilder.group({
+      fName: ['',[Validators.required,Validators.minLength(3)]],
+      lName: ['',[Validators.required,Validators.minLength(3)]],
+      email: ['',[Validators.required,Validators.email]],
+      tel: ['',[Validators.required]],
+      abonnement: ['',[Validators.required]],
+      duree: ['',[Validators.required]]
+
+    })
+
+
+
     const x  = document.getElementById("body");
     x!.style.backgroundImage = "url(/assets/Contact-Background.jpg)";
     x!.style.backgroundRepeat ="no-repeat";
@@ -71,6 +87,7 @@ startCountdown();
   }
   Inscription(){
     const Nom:any= document.getElementById("ClientNom");
+   
     const Prenom:any = document.getElementById("ClientPrenom");
     const Email:any = document.getElementById("ClientEmail");
     const Tel:any = document.getElementById("ClientTel");
@@ -83,11 +100,51 @@ startCountdown();
     const AbonnementVal:any = Abonnement.value;
     const DureeVal:any = Duree.value;
     this.client = {name:NameVal , email: EmailVal, tel:TelVal, abonnement:AbonnementVal, duree:DureeVal};
+    if(this.signupForm.invalid){
+      if(this.signupForm.controls['fName'].invalid){
+        Nom.placeholder = " Nom invalide ";
+        document.getElementById("ClientNom")?.classList.add("placeholder");
+       
+        
+       
+
+        
+        
+        
+        
+      }
+
+        if(this.signupForm.controls['lName'].invalid)
+        {
+        Prenom.placeholder = " Prénom invalide "
+        document.getElementById("ClientPrenom")?.classList.add("placeholder");
+        }
+        if(this.signupForm.controls['email'].invalid){
+        Email.placeholder = " Email invalide ";
+        document.getElementById("ClientEmail")?.classList.add("placeholder");
+        }
+        if(this.signupForm.controls['abonnement'].invalid){
+          const x = document.getElementById("selectedAbn");
+          x!.innerHTML=" Abonnement invalide";
+          Abonnement.style.color ="red";
+          Abonnement.style.fontSize="15px"; 
+          Abonnement.appendchild(x);
+
+        }
+        
+       
+        
+        
+        if(this.signupForm.controls['duree'].invalid)
+        Duree.ariaplaceholder = "invalid "
+    }
+    else{
     this.ClientService.addClient(this.client).subscribe((Client) => {
       console.log(`Client added: ${Client}`);
       
     });
     location.reload();
+  }
 
 
 

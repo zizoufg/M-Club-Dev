@@ -41,15 +41,7 @@ deleteAdherent(id:any){
  
 }
 async sendData(id:any){
-  interface AdherentDocument {
-    _id: string;
-    name: string;
-    email: string;
-    tel: string;
-    abonnement:string;
-    duree: string;
-   
-  }
+  
   this.SelectedId = id ;
   const selectedAdherent: any = await  this.AdherentService.getAdherentById(this.SelectedId).toPromise() ;
   const Name:any= document.getElementById("ModifierAdherentName") as HTMLInputElement;

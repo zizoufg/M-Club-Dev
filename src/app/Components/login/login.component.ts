@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     if (this.authGuard.isAuthenticated()) {
       if (this.authGuard.isAuthorized(this.email, this.password)) {
         this.router.navigate(['dashboard']);
-        console.log('test');
+        
         
       } else {
         this.errorMessage = 'Invalid email or password.';

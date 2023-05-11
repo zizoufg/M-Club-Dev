@@ -61,7 +61,7 @@ buttons.forEach((button) => {
       
     } else {
       button.classList.add("active");
-      button.innerHTML = " payé";
+      button.innerHTML = " Payé";
       const documentToCopy:any = await  this.ClientService.getClientById(id).toPromise();
       console.log(documentToCopy);
      await this.AdherentService.addAdherent(documentToCopy.client as unknown as AdherentDocument).toPromise();
