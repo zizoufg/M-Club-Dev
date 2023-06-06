@@ -19,14 +19,15 @@ export class ContactComponent implements OnInit {
   constructor(private ClientService :ClientService, private NotificationService:NotificationService, private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    
     ////////Controle des inputs d'inscription ///////////////////
     this.signupForm=this.formBuilder.group({
-      fName: ['',[Validators.required,Validators.minLength(3)]],
-      lName: ['',[Validators.required,Validators.minLength(3)]],
-      email: ['',[Validators.required,Validators.email]],
-      tel: ['',[Validators.required]],
-      abonnement: ['',[Validators.required]],
-      duree: ['',[Validators.required]]
+      fName: ['',[Validators.required]],
+      lName: ['',[Validators.required]],
+      email: ['',[Validators.required]],
+      tel: ['',[Validators.required]]
+      
+      
 
     })
 
@@ -48,36 +49,44 @@ const countdown = document.getElementById("countdown") as HTMLElement;
 let interval: number | null = null;
 
 button.addEventListener("click", function() {
-  if (!interval) {
+  document.querySelector<HTMLElement>(".popupC")!.style.display = "block";
+  if (!interval ) {
+    
     const now = new Date();
     const deadline = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
     localStorage.setItem("countdownDeadline", deadline.getTime().toString());
     startCountdown();
   }
+  
 });
 
-function startCountdown() {
+
+    const startCountdown = () => {
   const deadlineString = localStorage.getItem("countdownDeadline");
   if (deadlineString) {
     const deadline = parseInt(deadlineString);
     countdown.innerHTML = "Le compte à rebours est en cours...";
-    let interval:any = setInterval(function() {
+    let interval:any = setInterval(() => {
       const current = new Date();
-      const difference = deadline - current.getTime();
+      let difference = deadline - current.getTime();
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       countdown.innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
+      // difference = -1;
       if (difference < 0) {
         clearInterval(interval);
         interval = null;
         countdown.innerHTML = "Le compte à rebours est terminé!";
         localStorage.removeItem("countdownDeadline");
       }
+     
+      
+
     }, 1000);
   } else {
-    countdown.innerHTML = "Cliquez sur le bouton pour démarrer le compte à rebours";
+    countdown.innerHTML = "";
   }
 }
 
@@ -86,6 +95,9 @@ startCountdown();
 
   }
   Inscription(){
+    document.querySelector<HTMLElement>(".popupC")!.style.display = "block";
+    const fermer = document.getElementById("fermerC");
+    
     const Nom:any= document.getElementById("ClientNom");
    
     const Prenom:any = document.getElementById("ClientPrenom");
@@ -100,51 +112,18 @@ startCountdown();
     const AbonnementVal:any = Abonnement.value;
     const DureeVal:any = Duree.value;
     this.client = {name:NameVal , email: EmailVal, tel:TelVal, abonnement:AbonnementVal, duree:DureeVal};
-    if(this.signupForm.invalid){
-      if(this.signupForm.controls['fName'].invalid){
-        Nom.placeholder = " Nom invalide ";
-        document.getElementById("ClientNom")?.classList.add("placeholder");
-       
-        
-       
-
-        
-        
-        
-        
-      }
-
-        if(this.signupForm.controls['lName'].invalid)
-        {
-        Prenom.placeholder = " Prénom invalide "
-        document.getElementById("ClientPrenom")?.classList.add("placeholder");
-        }
-        if(this.signupForm.controls['email'].invalid){
-        Email.placeholder = " Email invalide ";
-        document.getElementById("ClientEmail")?.classList.add("placeholder");
-        }
-        if(this.signupForm.controls['abonnement'].invalid){
-          const x = document.getElementById("selectedAbn");
-          x!.innerHTML=" Abonnement invalide";
-          Abonnement.style.color ="red";
-          Abonnement.style.fontSize="15px"; 
-          Abonnement.appendchild(x);
-
-        }
-        
-       
-        
-        
-        if(this.signupForm.controls['duree'].invalid)
-        Duree.ariaplaceholder = "invalid "
-    }
-    else{
+   
+    
     this.ClientService.addClient(this.client).subscribe((Client) => {
       console.log(`Client added: ${Client}`);
       
     });
-    location.reload();
-  }
+    fermer?.addEventListener("click",()=>{
+      document.querySelector<HTMLElement>(".popupC")!.style.display = "none";
+      location.reload();
+    })
+    
+  
 
 
 

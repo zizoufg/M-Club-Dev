@@ -5,6 +5,7 @@ const adherentSchema = mongoose.Schema({
     email :String,
     tel : String,
     abonnement: String,
+    date:String,
     duree: String
    
 

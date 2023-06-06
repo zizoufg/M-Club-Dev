@@ -48,12 +48,14 @@ async sendData(id:any){
   const Email:any = document.getElementById("ModifierAdherentEmail") as HTMLInputElement;
   const Tel:any = document.getElementById("ModifierAdherentTel") as HTMLInputElement;
   const Abonnement:any = document.getElementById("ModifierAdherentAbonnement") as HTMLInputElement;
+  const Date:any = document.getElementById("ModifierAdherentDate") as HTMLInputElement;
   const Duree:any= document.getElementById("ModifierAdherentDuree") as HTMLInputElement;
 
   Name.value =selectedAdherent.adherent.name ;
    Email.value= selectedAdherent.adherent.email;
    Tel.value=selectedAdherent.adherent.tel; 
    Abonnement.value =selectedAdherent.adherent.abonnement;
+  Date.value=selectedAdherent.adherent.date;
    Duree.value=selectedAdherent.adherent.duree;
    
    
@@ -71,14 +73,16 @@ editAdherent(id:any){
     const Email:any = document.getElementById("ModifierAdherentEmail");
     const Tel:any = document.getElementById("ModifierAdherentTel");
     const Abonnement:any = document.getElementById("ModifierAdherentAbonnement");
+    const Date:any = document.getElementById("ModifierAdherentDate");
     const Duree:any= document.getElementById("ModifierAdherentDuree");
 
     const NameVal:any = Name.value;
     const EmailVal:any = Email.value;
     const TelVal:any = Tel.value;
     const AbonnementVal:any = Abonnement.value;
+    const DateVal:any = Date.value;
     const DureeVal:any = Duree.value;
-    this.adherent = {name:NameVal , email: EmailVal, tel:TelVal, abonnement:AbonnementVal, duree:DureeVal};
+    this.adherent = {name:NameVal , email: EmailVal, tel:TelVal, abonnement:AbonnementVal,date:DateVal, duree:DureeVal};
     console.log(this.adherent);
     this.AdherentService.editAdherent(this.adherent ,id).subscribe();
     location.reload();

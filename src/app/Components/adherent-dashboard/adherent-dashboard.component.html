@@ -12,6 +12,7 @@
                     <th> Email <span class="icon-arrow">&UpArrow;</span></th>
                     <th> Téléphone <span class="icon-arrow">&UpArrow;</span></th>
                     <th> Abonnement <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> date  <span class="icon-arrow">&UpArrow;</span></th>
                     <th> Durée <span class="icon-arrow">&UpArrow;</span></th>
                     <th>Action</th>
                     
@@ -23,6 +24,7 @@
                     <td> {{adherent.email}} </td>
                     <td> {{adherent.tel}} </td>
                     <td> {{adherent.abonnement}} </td>
+                    <td>{{adherent.date}}</td>
                     <td> {{adherent.duree}} </td>
                     <td>
                                     
@@ -67,6 +69,10 @@
                         <input class="form-control form-white"  placeholder="Enter Abonnement" id="ModifierAdherentAbonnement" rows="4"required name="description">
                         </div>
                         <div class="col-md-6">
+                          <label class="control-label form-label">Date</label>
+                          <input class="form-control form-white"  placeholder="Enter Abonnement" id="ModifierAdherentDate" rows="4"required name="description">
+                          </div>
+                        <div class="col-md-6">
                         <label  class="control-label form-label">Durée</label>
                         <input  class="form-control form-white"  placeholder="Enter Durée" id="ModifierAdherentDuree" rows="4"required name="description">
                         </div>
@@ -94,7 +100,7 @@
     <button id="fermer4">&times;</button>
     <h2>Attention !</h2>
     <p>
-     vous voulez vraiment  supprimer ce message ?
+      Voulez-vous vraiment  supprimer ce message ?
     </p>
     <a id="continuer4" >Continuer</a>
 </div>
